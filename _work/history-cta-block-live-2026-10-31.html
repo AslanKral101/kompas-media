@@ -1,0 +1,250 @@
+
+  
+
+<div class="sqs-code-container" data-localized="{&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}">
+  
+    <!-- =====================================================
+     KOMPAS — FOOTER (Squarespace Code Block)
+     Pure HTML + CSS, no script. Background colour + top line
+     live in Custom CSS (section 7). All links are live.
+     ===================================================== -->
+<style>
+  .kf {
+    --o: #FF9800;
+    --w: #FFFFFF;
+    --m: rgba(255, 255, 255, 0.72);
+    --f: rgba(255, 255, 255, 0.45);
+    --l: rgba(255, 255, 255, 0.10);
+    font-family: "Public Sans", sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: var(--w);
+  }
+  .kf *, .kf *::before, .kf *::after { box-sizing: border-box; }
+  .kf :where(p, ul, h4) { margin: 0 !important; padding: 0 !important; }
+  .kf li::before { display: none !important; }
+
+  /* ---- top: brand + 3 link columns ---- */
+  .kf-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    gap: 48px;
+    padding-bottom: 56px;
+  }
+
+  .kf-brand { display: grid; gap: 18px; align-content: start; }
+  .kf-brand img { display: block; width: 140px; height: auto; }
+  .kf-tag {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--o) !important;
+  }
+  .kf-about { max-width: 300px; font-size: 14px !important; line-height: 1.65 !important; color: var(--m) !important; }
+
+  .kf-social { display: flex; gap: 10px; margin-top: 4px; }
+  .kf-social a {
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--l);
+    border-radius: 50%;
+    background-image: none !important;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+  }
+  .kf-social svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: var(--w);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.25s ease;
+  }
+  .kf-social a:hover { border-color: var(--o); background: rgba(255, 152, 0, 0.08); }
+  .kf-social a:hover svg { stroke: var(--o); }
+
+  .kf-col h4 {
+    margin-bottom: 20px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--o) !important;
+  }
+  .kf-col ul { display: grid; gap: 12px; list-style: none; }
+  .kf-col li { margin: 0 !important; padding: 0 !important; }
+  .kf-col a {
+    position: relative;
+    display: inline-block;
+    padding: 2px 0;
+    font-size: 14px !important;
+    line-height: 1.3;
+    color: var(--m) !important;
+    text-decoration: none !important;
+    background-image: none !important;
+    transition: color 0.25s ease;
+  }
+  .kf-col a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+    height: 1px;
+    background: var(--o);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+  .kf-col a:hover { color: var(--w) !important; }
+  .kf-col a:hover::after { transform: scaleX(1); }
+
+  /* ---- bottom bar ---- */
+  .kf-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding-top: 22px;
+    border-top: 1px solid var(--l);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    color: var(--f);
+  }
+  .kf-bottom a {
+    color: var(--f) !important;
+    text-decoration: none !important;
+    background-image: none !important;
+    transition: color 0.25s ease;
+  }
+  .kf-bottom a:hover { color: var(--o) !important; }
+  .kf-bottom b { font-weight: 600; color: var(--m); }
+
+  @media (max-width: 960px) {
+    .kf-top { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+    .kf-brand { grid-column: 1 / -1; }
+  }
+  @media (max-width: 480px) {
+    .kf-bottom { flex-direction: column; text-align: center; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .kf * { transition: none !important; }
+  }
+</style>
+
+<div class="kf">
+  <div class="kf-top">
+
+    <!-- brand -->
+    <div class="kf-brand">
+      <img src="https://images.squarespace-cdn.com/content/v1/6809590b27b6474f49d40fa3/5b3bbfe1-71f3-4e74-9dde-838e1aaa2405/White+Logo-07.png?format=500w" width="1500" height="361" alt="KOMPAS" loading="lazy">
+      <p class="kf-tag">Find Your Direction</p>
+      <p class="kf-about">Field watches inspired by the RAF Sector Clock. Designed in Great Britain, built for real use.</p>
+      <div class="kf-social">
+        <a href="https://www.instagram.com/kompaswatch/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><path d="M17.5 6.5h.01"></path></svg>
+        </a>
+        <a href="https://www.tiktok.com/@kompaswatch" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"></path><path d="M14 3a5 5 0 0 0 5 5"></path></svg>
+        </a>
+        <a href="https://youtube.com/@kompaswatches" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="4"></rect><path d="m10 9.5 5 2.5-5 2.5z"></path></svg>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61579581746500" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 3h-2.5A3.5 3.5 0 0 0 9 6.5V9H6.5v3.5H9V21h3.5v-8.5H15l.5-3.5h-3V7a1 1 0 0 1 1-1H15z"></path></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- watches -->
+    <div class="kf-col">
+      <h4>Watches</h4>
+      <ul>
+        <li><a href="/watches/p/north">North</a></li>
+        <li><a href="/watches/p/east">East</a></li>
+        <li><a href="/watches/p/south">South</a></li>
+        <li><a href="/watches/p/west">West</a></li>
+        <li><a href="/watches">All Watches</a></li>
+      </ul>
+    </div>
+
+    <!-- about -->
+    <div class="kf-col">
+      <h4>About Us</h4>
+      <ul>
+        <li><a href="/history">Our History</a></li>
+        <li><a href="/news">News</a></li>
+      </ul>
+    </div>
+
+    <!-- help -->
+    <div class="kf-col">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/faq#kfq-shipping">Shipping</a></li>
+        <li><a href="/returns">Returns</a></li>
+        <li><a href="/faq#kfq-warranty">Warranty</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="kf-bottom">
+    <span>© 2026 <b>Kompas</b> · Oral and Co Fine Goods Ltd</span>
+    <span><a href="/terms">Terms</a> &nbsp;·&nbsp; <a href="/privacy">Privacy</a></span>
+  </div>
+</div>
+
+
+<style>
+  /* closing call to action above the footer links, and space between the newsletter and the footer */
+  section[data-section-id="69ede6784583922c0294b79c"]{padding-bottom:clamp(56px,7vw,96px)!important}
+  .kf-cta{max-width:1200px;margin:0 auto;padding:clamp(24px,4vw,48px) 0 clamp(48px,6vw,80px);margin-bottom:clamp(40px,5vw,64px);border-bottom:1px solid rgba(255,255,255,.1);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:24px 40px;font-family:"Public Sans",sans-serif}
+  .kf-cta-title{margin:0!important;font-family:"Public Sans",sans-serif!important;font-size:clamp(34px,4.2vw,54px)!important;font-weight:700!important;line-height:1.05!important;letter-spacing:-.025em!important;color:#fff!important;text-transform:none!important}
+  .kf-cta-title span{color:#FF9800}
+  .kf-cta-btn{display:inline-flex;align-items:center;gap:12px;padding:19px 34px;border-radius:999px;background:#FF9800;background-image:none!important;color:#0b0907!important;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;line-height:1;text-decoration:none!important;transition:background-color .25s ease}
+  .kf-cta-btn:hover{background:#fff}
+  .kf-cta-btn i{font-style:normal;transition:transform .25s ease}
+  .kf-cta-btn:hover i{transform:translateX(4px)}
+  @media (max-width:700px){.kf-cta{flex-direction:column;text-align:center}.kf-cta-btn{width:100%;justify-content:center}}
+</style>
+
+  
+  
+
+
+
+</div>
+
+<style class="transform-vars">
+    .fe-block-yui_3_17_2_1_1790971239376_14514 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+      --block-transform: none;
+
+      opacity: var(--opacity, 1);
+      transform: var(--block-transform);
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style><style class="transform-overrides-vars">
+  
+</style>
+
