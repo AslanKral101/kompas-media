@@ -1,0 +1,253 @@
+<!-- KOMPAS home boot quotes v1: inserted before the old "What They Say" section (kept, hidden). Remove this block to undo. -->
+<style>
+.kqb{position:relative;width:100%;background:#000;color:#fff;font-family:'Public Sans',sans-serif;padding:24px 0;box-sizing:border-box;overflow:hidden;-webkit-font-smoothing:antialiased}
+.kqb *,.kqb *::before,.kqb *::after{box-sizing:border-box}
+.kqb :where(p,h2,blockquote){margin:0;padding:0;border:0;text-transform:none;letter-spacing:normal;font-family:inherit;color:inherit;background:none}
+.kqb-stage{position:relative;height:clamp(560px,76vh,820px);margin-top:0;cursor:default;outline:none;touch-action:manipulation;-webkit-tap-highlight-color:transparent;user-select:none;-webkit-user-select:none;overflow:hidden}
+.kqb-stage:focus-visible{box-shadow:inset 0 0 0 2px #FF9800}
+.kqb-shake{position:absolute;inset:0;will-change:transform}
+.kqb-img{position:absolute;left:0;top:0;pointer-events:none}
+.kqb-img img{display:block;width:100%!important;height:100%!important;max-width:none!important;object-fit:fill}
+.kqb-boot{will-change:transform;-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
+.kqb-dark{position:absolute;left:0;top:0;width:10px;height:10px;border-radius:50%;pointer-events:none;opacity:0;background:radial-gradient(closest-side,rgba(20,8,0,.55),rgba(20,8,0,.25) 60%,rgba(20,8,0,0));will-change:opacity,transform}
+.kqb-edge{position:absolute;pointer-events:none;background:radial-gradient(ellipse 18% 16% at 95.5% 95.5%,#000 45%,rgba(0,0,0,0) 100%),linear-gradient(to right,#000 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 84%,#000 100%),linear-gradient(to bottom,#000 0%,rgba(0,0,0,0) 14%,rgba(0,0,0,0) 80%,#000 100%)}
+.kqb-fx,.kqb-gl{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.kqb-gl{opacity:0;transition:opacity .5s cubic-bezier(.23,1,.32,1)}
+.kqb.is-gl .kqb-gl{opacity:1}
+.kqb-vig{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,0) 16%,rgba(0,0,0,0) 74%,#000 100%),linear-gradient(to right,#000 0%,rgba(0,0,0,0) 14%,rgba(0,0,0,0) 86%,#000 100%),radial-gradient(ellipse 70% 80% at 58% 50%,rgba(0,0,0,0) 40%,rgba(0,0,0,.55) 100%)}
+.kqb-label{margin:0!important;font-family:'Public Sans',sans-serif!important;line-height:1.4!important;position:absolute;left:0;right:0;top:9%;display:flex;align-items:center;justify-content:center;gap:12px;font-size:12px!important;font-weight:600!important;letter-spacing:.16em!important;text-transform:uppercase!important;color:#FF9800!important;pointer-events:none}
+.kqb-label i{display:block;width:28px;height:1px;background:rgba(255,152,0,.7)}
+.kqb-dom{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);display:flex;gap:16px;justify-content:flex-start;padding:0 24px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}
+.kqb.is-gl .kqb-dom{display:none}
+.kqb-card{flex:0 0 360px;max-width:84vw;padding:28px 28px 24px;border:1px solid rgba(255,255,255,.14);border-radius:8px;background:rgba(0,0,0,.58);text-align:left;opacity:1;scroll-snap-align:center;transition:opacity .4s,transform .4s cubic-bezier(.23,1,.32,1)}
+.kqb-card.on{opacity:1;transform:scale(1.04)}
+.kqb-card q{display:block;font-size:16px;line-height:1.45;color:#fff;quotes:"\201C" "\201D"}
+.kqb-card b{display:block;margin-top:16px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FF9800}
+.kqb-sr{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0;padding:0}
+@media (max-width:700px){
+  .kqb{padding:8px 0}
+  .kqb-stage{height:470px}
+  .kqb-vig{background:linear-gradient(to bottom,#000 0%,rgba(0,0,0,0) 9%,rgba(0,0,0,0) 86%,#000 100%),radial-gradient(ellipse 80% 85% at 60% 50%,rgba(0,0,0,0) 55%,rgba(0,0,0,.28) 100%)}
+  .kqb-label{top:6%}
+}
+
+
+html.kqb-on section[data-section-id="69fba66fc40e3555e8e69dcc"]{display:none!important}
+section[data-section-id="69fba66fc40e3555e8e69dcc"]::before{background-image:none!important}
+</style>
+<template id="kqb-tpl">
+<section class="kqb" id="kqb" aria-label="What they say">
+  <div class="kqb-stage" tabindex="0" aria-label="Quotes from the press and owners, pushed forward by the boot. Arrow keys move the row.">
+    <div class="kqb-shake">
+      <div class="kqb-img kqb-bg"><img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ae3c9db67eb4776be4f6ba1/1793313244534/k-quotes-boot.webp" loading="lazy" alt="" decoding="async" draggable="false"></div>
+      <div class="kqb-img kqb-boot" aria-hidden="true"><img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ae3c9db67eb4776be4f6ba1/1793313244534/k-quotes-boot.webp" loading="lazy" alt="" decoding="async" draggable="false"></div>
+      <div class="kqb-dark" aria-hidden="true"></div>
+      <div class="kqb-edge" aria-hidden="true"></div>
+      <div class="kqb-vig" aria-hidden="true"></div>
+      <h2 class="kqb-label"><i aria-hidden="true"></i>What they say<i aria-hidden="true"></i></h2>
+      <canvas class="kqb-gl" aria-hidden="true"></canvas>
+      <div class="kqb-dom" aria-hidden="true"></div>
+    </div>
+  </div>
+  <ul class="kqb-sr"></ul>
+</section>
+</template>
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+  if(location.pathname!=="/"||document.getElementById("kqb"))return;
+  var old=document.querySelector('section[data-section-id="69fba66fc40e3555e8e69dcc"]'),tpl=document.getElementById("kqb-tpl");if(!old||!tpl)return;
+  try{
+  old.parentNode.insertBefore(tpl.content.cloneNode(true),old);
+  document.documentElement.classList.add("kqb-on");
+(function () {
+  'use strict';
+  var root = document.getElementById('kqb');
+  if (!root || root.__kqb) return; root.__kqb = 1;
+
+  var QUOTES = [
+    { q: 'It’s a fun, fittingly adventurous design and already has me wondering what the brand will do next.', who: 'Oracle Time Magazine', kind: 'Press' },
+    { q: 'Bold and beautiful design referencing something legendary and historical, I love that!', who: 'MicroBrandSpotter', kind: 'Reviewer' },
+    { q: 'Didn’t expect it, but it’s genuinely quicker to read than anything else I own. Wearing it every day.', who: 'Customer No/21', kind: 'Owner' },
+    { q: 'Thought the dial design was just aesthetic at first. After a few days, every other watch started feeling slower to read.', who: 'Customer No/57', kind: 'Owner' },
+    { q: 'Kompas is a young brand that has combined historical story telling with modern branding and inspiration.', who: 'Watch Gecko', kind: 'Press' }
+  ];
+  var N = QUOTES.length;
+  // the photo: 2752 x 1536; the boot sole sits at (SX, SY) with radii RX, RY (image px)
+  var IW = 2752, IH = 1536, SX = 1678, SY = 786, RX = 282, RY = 650, ROT = -0.06;
+  // outline of the raised boot and leg (image px), feathered into a mask
+  var POLY = [[1585,137],[1672,137],[1759,174],[1871,289],[1927,438],[1943,687],[1960,935],[1958,1184],[1945,1321],[1821,1430],[1697,1437],[1604,1371],[1548,1296],[1492,1290],[1361,1315],[1274,1209],[1243,1010],[1262,811],[1312,755],[1423,730],[1442,649],[1401,538],[1396,376],[1417,202],[1498,158]];
+
+  var stage = root.querySelector('.kqb-stage'), shake = root.querySelector('.kqb-shake');
+  var bgW = root.querySelector('.kqb-bg'), bootW = root.querySelector('.kqb-boot'), dark = root.querySelector('.kqb-dark'), edge = root.querySelector('.kqb-edge');
+  var glc = root.querySelector('.kqb-gl'), dom = root.querySelector('.kqb-dom');
+  var sr = root.querySelector('.kqb-sr');
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var phone = window.matchMedia && matchMedia('(max-width: 700px)').matches;
+
+  // feathered SVG mask for the boot layer (same pixels as the photo, so edges blend invisibly)
+  (function () {
+    var pts = POLY.map(function (p) { return p[0] + ',' + p[1]; }).join(' ');
+    var svg = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + IW + ' ' + IH + '" preserveAspectRatio="none"><filter id="f" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="22"/></filter><polygon points="' + pts + '" fill="#fff" filter="url(#f)"/></svg>';
+    var u = 'url("data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg) + '")';
+    bootW.style.webkitMaskImage = u; bootW.style.maskImage = u;
+  })();
+
+  var W = 0, H = 0, DPR = 1, L = { s: 1, x: 0, y: 0 }, P = { x: 0, y: 0 }, idx = 0, inView = false, started = false, lastUser = -1e9;
+  var CW = 300, GAP = 16, PITCH = 316, CH = 210, ROWY = 0, STRIP = 0, offset = 0, offFrom = 0, offTo = 0;
+  var gl = null, U = {}, tex = null, cStrip = document.createElement('canvas'), fx = null, parts = [], raf = 0, needs = true;
+  var BAND = 1440, amp = 0, ring = 0, ringA = 0, laid = false, speed = phone ? 24 : 30, tween = null, visible = false;
+
+  // ---------- dom fallback + screen-reader list ----------
+  QUOTES.forEach(function (q) {
+    var c = document.createElement('div'); c.className = 'kqb-card';
+    c.innerHTML = '<q></q><b></b>'; c.querySelector('q').textContent = q.q; c.querySelector('b').textContent = q.who + ' \u00b7 ' + q.kind;
+    dom.appendChild(c);
+    var li = document.createElement('li'); li.textContent = '\u201c' + q.q + '\u201d \u2014 ' + q.who + ', ' + q.kind; sr.appendChild(li);
+  });
+
+  // ---------- card strip texture ----------
+  function wrap(x, t, w) { var ws = t.split(' '), out = [], l = ''; for (var i = 0; i < ws.length; i++) { var s = l ? l + ' ' + ws[i] : ws[i]; if (x.measureText(s).width > w && l) { out.push(l); l = ws[i]; } else l = s; } if (l) out.push(l); return out; }
+  function rr(x, a, b, w, h, r) { x.beginPath(); x.moveTo(a + r, b); x.arcTo(a + w, b, a + w, b + h, r); x.arcTo(a + w, b + h, a, b + h, r); x.arcTo(a, b + h, a, b, r); x.arcTo(a, b, a + w, b, r); x.closePath(); }
+  // cards drawn like the homepage "What They Say" cards: dark glass, thin border, 8 px corners
+  var FS_Q = 17, LH_Q = 25.5, PAD = 28, QM = 48, QT = 40;
+  function cardHeight(x) {
+    x.font = '500 ' + FS_Q + 'px "Public Sans", sans-serif';
+    var m = 0; QUOTES.forEach(function (q) { m = Math.max(m, wrap(x, q.q, CW - PAD * 2).length); });
+    return Math.ceil(PAD + QT + m * LH_Q + (phone ? 16 : 24) + (phone ? 12 : 16) + 14 + (phone ? 18 : 24));
+  }
+  function drawStrip() {
+    STRIP = N * PITCH;
+    var m = cStrip.getContext('2d'); CH = cardHeight(m);
+    cStrip.width = Math.round(STRIP * DPR); cStrip.height = Math.round(CH * DPR);
+    var x = cStrip.getContext('2d'); x.setTransform(DPR, 0, 0, DPR, 0, 0); x.clearRect(0, 0, STRIP, CH);
+    QUOTES.forEach(function (q, i) {
+      var ox = i * PITCH + GAP / 2, w = CW, h = CH;
+      rr(x, ox + .5, .5, w - 1, h - 1, 8); x.fillStyle = 'rgba(0,0,0,0.58)'; x.fill();
+      x.strokeStyle = 'rgba(255,255,255,0.14)'; x.lineWidth = 1; x.stroke();
+      x.textBaseline = 'alphabetic'; x.textAlign = 'left';
+      try { x.letterSpacing = '0px'; } catch (e) {}
+      x.fillStyle = '#FF9800'; x.font = '700 ' + QM + 'px "Public Sans", sans-serif';
+      x.fillText('“', ox + PAD - 2, PAD + QT);
+      x.fillStyle = '#fff'; x.font = '500 ' + FS_Q + 'px "Public Sans", sans-serif';
+      var lines = wrap(x, q.q, w - PAD * 2);
+      lines.forEach(function (l, k) { x.fillText(l, ox + PAD, PAD + QT + (phone ? 4 : 6) + (phone ? 14 : 18) + k * LH_Q); });
+      var FB = phone ? 18 : 24, ly = h - FB - 14 - (phone ? 12 : 16);
+      x.fillStyle = 'rgba(255,255,255,0.14)'; x.fillRect(ox + PAD, ly, w - PAD * 2, 1);
+      x.font = '600 12px "Public Sans", sans-serif'; try { x.letterSpacing = phone ? '0.6px' : '1.9px'; } catch (e) {}
+      x.fillStyle = '#FF9800'; x.fillText(q.who.toUpperCase(), ox + PAD, h - FB);
+      x.font = '500 12px "Public Sans", sans-serif'; try { x.letterSpacing = phone ? '0.6px' : '1.6px'; } catch (e) {}
+      x.fillStyle = 'rgba(255,255,255,0.78)'; x.textAlign = 'right'; x.fillText(q.kind.toUpperCase(), ox + w - PAD, h - FB); x.textAlign = 'left';
+    });
+  }
+
+  // ---------- WebGL ----------
+  var VS = 'attribute vec2 a;void main(){gl_Position=vec4(a,0.,1.);}';
+  var FS = [
+    'precision highp float;',
+    'uniform sampler2D uT;uniform vec2 uRes,uP;uniform float uR,uAmp,uRing,uRingA,uOff,uStrip,uRowY,uRowH,uPitch,uSc,uBand;',
+    'vec4 st(vec2 p){if(p.y<uRowY||p.y>uRowY+uRowH)return vec4(0.);float sx=mod(p.x+uOff,uStrip);return texture2D(uT,vec2(sx/uStrip,(p.y-uRowY)/uRowH));}',
+    'void main(){',
+    ' vec2 p=vec2(gl_FragCoord.x,uRes.y-gl_FragCoord.y);',
+    ' vec2 d=p-uP;float dr=length(d);float r=dr/uR;vec2 dir=d/max(dr,1.0);',
+    ' if(r>1.7&&(p.y<uRowY-4.0||p.y>uRowY+uRowH+4.0)){gl_FragColor=vec4(0.);return;}',
+    ' float k=uAmp*0.36;',
+    ' vec2 ps=uP+d*(1.0-k*exp(-r*r*1.7));',
+    ' float w=exp(-pow((dr-uRing)/(30.0*uSc),2.0))*uRingA;',
+    ' ps-=dir*w*15.0*uSc;',
+    ' float ca=(abs(uAmp)*0.8*exp(-r*r*1.1)+w*3.0)*uSc;vec2 o=dir*ca;',
+    ' vec4 c=st(ps);vec4 cr=st(ps+o);vec4 cb=st(ps-o);c=vec4(cr.r,c.g,cb.b,max(c.a,max(cr.a,cb.a)));',
+    ' float f=mix(0.82,1.0,exp(-pow((p.x-uP.x)/(uPitch*0.8),2.0)));',
+    ' float shade=1.0+max(uAmp,0.0)*0.22*exp(-r*r*2.2);',
+    ' float bx=(p.x-(uRes.x-uBand)*0.5)/uBand;float fe=smoothstep(0.0,0.08,bx)*(1.0-smoothstep(0.92,1.0,bx));',
+    ' c*=f*shade*fe;',
+    ' float sh=max(uAmp,0.0)*0.38*exp(-pow((r-1.0)/0.28,2.0));',
+    ' float hl=max(uAmp,0.0)*0.12*pow(max(0.0,1.0-length(d/uR-vec2(-0.32,-0.38))*1.5),3.0);',
+    ' vec3 rgb=c.rgb+vec3(1.0,0.92,0.8)*hl*(1.0-c.a)+vec3(1.0,0.95,0.85)*w*0.05;',
+    ' float al=c.a+(1.0-c.a)*min(1.0,sh+hl+w*0.05);',
+    ' gl_FragColor=vec4(rgb,al);',
+    '}'].join('\n');
+  function initGL() {
+    try { gl = glc.getContext('webgl', { alpha: true, premultipliedAlpha: true, antialias: false, powerPreference: 'high-performance' }); } catch (e) { gl = null; }
+    if (!gl) return false;
+    function sh(t, s) { var o = gl.createShader(t); gl.shaderSource(o, s); gl.compileShader(o); if (!gl.getShaderParameter(o, gl.COMPILE_STATUS)) { console.warn('kqb', gl.getShaderInfoLog(o)); return null; } return o; }
+    var v = sh(gl.VERTEX_SHADER, VS), f = sh(gl.FRAGMENT_SHADER, FS); if (!v || !f) { gl = null; return false; }
+    var pr = gl.createProgram(); gl.attachShader(pr, v); gl.attachShader(pr, f); gl.linkProgram(pr);
+    if (!gl.getProgramParameter(pr, gl.LINK_STATUS)) { gl = null; return false; }
+    gl.useProgram(pr);
+    var b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    var al = gl.getAttribLocation(pr, 'a'); gl.enableVertexAttribArray(al); gl.vertexAttribPointer(al, 2, gl.FLOAT, false, 0, 0);
+    ['uT', 'uRes', 'uP', 'uR', 'uAmp', 'uRing', 'uRingA', 'uOff', 'uStrip', 'uRowY', 'uRowH', 'uPitch', 'uSc', 'uBand'].forEach(function (n) { U[n] = gl.getUniformLocation(pr, n); });
+    tex = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, tex);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true);
+    gl.uniform1i(U.uT, 0);
+    glc.addEventListener('webglcontextlost', function (e) { e.preventDefault(); gl = null; root.classList.remove('is-gl'); });
+    return true;
+  }
+
+  // ---------- layout ----------
+  function layout() {
+    var r = stage.getBoundingClientRect(); W = Math.max(1, Math.round(r.width)); H = Math.max(1, Math.round(r.height));
+    DPR = Math.min(window.devicePixelRatio || 1, phone ? 1.5 : 1.6);
+    var s = phone ? Math.min(H * 1.02 / IH, W / 1330) : H * 1.1 / IH, dw = IW * s, dh = IH * s;               // fit the height (slight overscan); wide screens fade to black at the sides
+    var want = phone ? 0.64 : 0.58;                               // where the sole sits across the stage
+    var x = want * W - SX * s; if (dw >= W) x = Math.min(0, Math.max(W - dw, x));
+    var y = (H - dh) / 2;
+    edge.style.width = dw + 'px'; edge.style.height = dh + 'px'; edge.style.left = x + 'px'; edge.style.top = y + 'px';
+    L = { s: s, x: x, y: y };
+    [bgW, bootW].forEach(function (el) { el.style.width = dw + 'px'; el.style.height = dh + 'px'; el.style.left = x + 'px'; el.style.top = y + 'px'; });
+    P = { x: x + SX * s, y: y + SY * s };
+    bootW.style.transformOrigin = (SX / IW * 100) + '% ' + (SY / IH * 100) + '%'; bootW.style.transform = 'scale(' + BOOT + ')';
+    var dwid = RX * s * 3.0, dhei = RY * s * 2.4; dark.style.width = dwid + 'px'; dark.style.height = dhei + 'px'; dark.style.left = (P.x - dwid / 2) + 'px'; dark.style.top = (P.y - dhei / 2) + 'px';
+    CW = phone ? Math.min(250, W - 100) : 360; GAP = phone ? 14 : 20; PITCH = CW + GAP;
+    FS_Q = phone ? 13 : 17; LH_Q = phone ? 19 : 25.5; PAD = phone ? 16 : 28; QM = phone ? 32 : 48; QT = phone ? 26 : 40; CH = cardHeight(cStrip.getContext('2d'));
+    BAND = Math.min(W, 1440);
+    ROWY = P.y - CH / 2;
+    if (!laid) { laid = true; offset = offFor(0); }
+    if (gl) { glc.width = Math.round(W * DPR); glc.height = Math.round(H * DPR); gl.viewport(0, 0, glc.width, glc.height); drawStrip(); gl.bindTexture(gl.TEXTURE_2D, tex); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, cStrip); }
+    needs = true; loop();
+  }
+  // offset (css px) that puts card i under the sole
+  function offFor(i) { return i * PITCH + PITCH / 2 - P.x; }
+
+  // ---------- permanent push: the boot stays pressed into the glass, the row keeps flowing over it ----------
+  var AMP = phone ? 0.6 : 0.86, BOOT = 1.07, SPEED = phone ? 20 : 30;
+  var lastT = 0;
+  function eio(t) { return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+  function frame() {
+    raf = 0; var now = performance.now(); var dt = Math.min(0.05, (now - (lastT || now)) / 1000); lastT = now;
+    var target = reduce ? 0 : SPEED;
+    speed += (target - speed) * (1 - Math.exp(-dt * 2.5));
+    var nd = 0;
+    if (tween) { var k = Math.min(1, (now - tween.t0) / 600), e = eio(k); nd = (e - tween.done) * tween.d; tween.done = e; if (k >= 1) tween = null; }
+    offset += speed * dt + nd;
+    if (gl) {
+      gl.clearColor(0, 0, 0, 0); gl.clear(gl.COLOR_BUFFER_BIT);
+      gl.uniform2f(U.uRes, glc.width, glc.height); gl.uniform2f(U.uP, P.x * DPR, P.y * DPR);
+      gl.uniform1f(U.uR, Math.min(H * 0.46, RY * L.s * 0.9) * DPR); gl.uniform1f(U.uAmp, AMP);
+      gl.uniform1f(U.uRing, 0); gl.uniform1f(U.uRingA, 0);
+      var o = ((offset % STRIP) + STRIP) % STRIP;
+      gl.uniform1f(U.uOff, o * DPR); gl.uniform1f(U.uStrip, STRIP * DPR); gl.uniform1f(U.uRowY, ROWY * DPR); gl.uniform1f(U.uRowH, CH * DPR);
+      gl.uniform1f(U.uPitch, PITCH * DPR); gl.uniform1f(U.uSc, DPR * H / 760); gl.uniform1f(U.uBand, BAND * DPR);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+    }
+    if (visible && !document.hidden && (!reduce || tween)) loop(); else lastT = 0;
+  }
+  function loop() { if (!raf) raf = requestAnimationFrame(frame); }
+
+  // ---------- input: never pauses; arrow keys add a one-card nudge on top of the flow ----------
+  stage.addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    e.preventDefault();
+    tween = { d: (e.key === 'ArrowRight' ? 1 : -1) * PITCH, done: 0, t0: performance.now() }; loop();
+  });
+  document.addEventListener('visibilitychange', function () { if (!document.hidden && visible) loop(); });
+
+  function begin() {
+    if (started) return; started = true;
+    if (initGL()) root.classList.add('is-gl');
+    var fr = (document.fonts && document.fonts.load) ? Promise.race([Promise.all([document.fonts.load('500 15px "Public Sans"'), document.fonts.load('800 34px "Public Sans"'), document.fonts.load('700 12px "Public Sans"')]), new Promise(function (r) { setTimeout(r, 2500); })]) : Promise.resolve();
+    fr.then(function () {
+      layout();
+      if (window.ResizeObserver) { var rt = 0; new ResizeObserver(function () { clearTimeout(rt); rt

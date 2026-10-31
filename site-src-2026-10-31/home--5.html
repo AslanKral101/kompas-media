@@ -1,0 +1,276 @@
+<!-- page /home section 69ede6784583922c0294b79c block block-yui_3_17_2_1_1790984131233_2568 -->
+
+  
+
+<div class="sqs-code-container" data-localized="{&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}">
+  
+    <!-- KOMPAS — INSTAGRAM SHOWCASE + NEWSLETTER (Code Block, Home, section 69ede6784583922c0294b79c).
+     Builds a portrait-card showcase from the native Instagram block (which it hides) and restyles the native Newsletter block.
+     Everything is scoped to this one section. -->
+<div class="kig" id="kompasIG">
+  <div class="kig-head">
+    <div>
+      <p class="kig-k">Instagram</p>
+      <h2 class="kig-title">Seen On <span>The Wrist</span></h2>
+    </div>
+    <div class="kig-side">
+      <p class="kig-lead">Short films, collaborations and the places KOMPAS has been. Straight from <b>@kompaswatch</b>.</p>
+      <div class="kig-ctrl">
+        <a class="kig-btn" href="https://www.instagram.com/kompaswatch/" target="_blank" rel="noopener">Follow <i>↗</i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="kig-rail"><div class="kig-track" id="kigTrack"></div></div>
+</div>
+
+<style>
+section[data-section-id="69ede6784583922c0294b79c"]{overflow-x:clip}
+/* the native Instagram block only feeds the showcase */
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block:has(.sqs-block-instagram){display:none!important}
+/* newsletter first (right under Choose Your Direction), Instagram closes the page */
+section[data-section-id="69ede6784583922c0294b79c"] .fluid-engine{grid-template-areas:"news" "code" "ig"!important}
+
+.kig{--o:#FF9800;--w:#fff;--m:rgba(255,255,255,.66);--l:rgba(255,255,255,.12);font-family:"Public Sans",sans-serif;color:var(--w);padding-top:8px}
+.kig *{box-sizing:border-box}
+.kig :where(h2,p){margin:0!important}
+.kig a{text-decoration:none!important;background-image:none!important}
+.kig button{font:inherit;cursor:pointer}
+
+.kig-head{display:grid;grid-template-columns:1fr auto;align-items:end;gap:24px 56px;margin-bottom:36px}
+.kig-k{display:flex;align-items:center;gap:14px;font-size:12px!important;font-weight:600!important;letter-spacing:.24em!important;text-transform:uppercase;color:var(--o)!important}
+.kig-k::before{content:"";width:28px;height:1px;background:var(--o)}
+.kig-title{margin-top:14px!important;font-size:clamp(34px,4vw,56px)!important;font-weight:700!important;line-height:1!important;letter-spacing:-.02em!important;color:var(--w)!important}
+.kig-title span{color:var(--o)}
+.kig-side{max-width:380px}
+.kig-lead{font-size:15px!important;line-height:1.55!important;color:var(--m)!important}
+.kig-lead b{color:var(--w);font-weight:600}
+.kig-ctrl{display:flex;align-items:center;gap:10px;margin-top:18px}
+.kig-btn{display:inline-flex;align-items:center;gap:10px;height:44px;padding:0 22px;border-radius:999px;background:var(--o);color:#0b0907!important;
+  font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;transition:background .25s;margin-right:auto}
+.kig-btn:hover{background:#fff}
+.kig-btn i{font-style:normal}
+.kig-arrow{width:44px;height:44px;border-radius:50%;border:0;background:transparent;color:var(--w);font-size:16px;box-shadow:0 0 0 1px var(--l);transition:box-shadow .25s,color .25s}
+.kig-arrow:hover{box-shadow:0 0 0 1px var(--o);color:var(--o)}
+.kig-arrow:disabled{opacity:.3;cursor:default}
+
+/* rail fades out on the right until the end is reached */
+.kig-rail{-webkit-mask-image:linear-gradient(to right,transparent,#000 5%,#000 88%,transparent);mask-image:linear-gradient(to right,transparent,#000 5%,#000 88%,transparent)}
+.kig-rail.at-end{-webkit-mask-image:none;mask-image:none}
+.kig-track{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:none;scroll-behavior:auto;padding:4px 0;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.kig-track::-webkit-scrollbar{display:none}
+.kig-card{position:relative;flex:0 0 clamp(240px,23vw,330px);aspect-ratio:4/5;border-radius:16px;overflow:hidden;scroll-snap-align:start;background:#111;
+  box-shadow:0 0 0 1px var(--l);color:var(--w)!important}
+.kig-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.kig-card:hover img{transform:scale(1.05)}
+.kig-card::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(0,0,0,.88) 0%,rgba(0,0,0,.35) 38%,rgba(0,0,0,0) 62%)}
+.kig-cap{position:absolute;left:0;right:0;bottom:0;z-index:2;padding:20px}
+.kig-cap b{display:block;font-size:17px;font-weight:700;line-height:1.25;color:var(--w)}
+.kig-cap span{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;margin-top:8px;font-size:13px;line-height:1.5;color:rgba(255,255,255,.72);
+  max-height:0;opacity:0;transition:max-height .45s ease,opacity .35s ease}
+.kig-card:hover .kig-cap span,.kig-card:focus-visible .kig-cap span{max-height:3.2em;opacity:1}
+.kig-cap em{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-style:normal;font-size:11px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--o)}
+.kig-ico{position:absolute;top:14px;right:14px;z-index:2;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(0,0,0,.45);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.kig-ico svg{width:15px;height:15px;fill:#fff}
+.kig-card.is-follow{display:flex;flex-direction:column;justify-content:space-between;padding:24px;color:#0b0907!important;
+  background:radial-gradient(130% 110% at 100% 0%,#ffbe5c 0%,#FF9800 45%,#b86400 100%);box-shadow:none}
+.kig a.kig-card.is-follow{background-image:radial-gradient(130% 110% at 100% 0%,#ffbe5c 0%,#FF9800 45%,#b86400 100%)!important}
+.kig-card.is-follow::before{display:none}
+.kig-card.is-follow svg{width:34px;height:34px;fill:#0b0907}
+.kig-card.is-follow b{font-size:26px;font-weight:800;line-height:1.05}
+.kig-card.is-follow em{display:block;margin-top:14px;font-style:normal;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+
+.kig-bar{position:relative;height:2px;margin-top:26px;background:var(--l);border-radius:2px;overflow:hidden}
+.kig-bar span{position:absolute;left:0;top:0;bottom:0;width:20%;background:var(--o);border-radius:2px;transition:left .2s linear,width .2s linear}
+
+/* newsletter: open editorial row instead of a boxed card */
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter{background:none!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:0!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-wrapper{
+  background:none!important;box-shadow:none!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:10px!important;padding:20px 22px!important;margin:0 0 clamp(48px,6vw,80px)!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-wrapper::before,
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-wrapper::after{display:none!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:0 64px}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-header{margin:0!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-header-title{font-family:"Public Sans",sans-serif!important;font-size:17px!important;font-weight:700!important;line-height:1.1!important;color:#fff!important;margin:0!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-header-description p{margin:4px 0 0!important;font-size:13px!important;line-height:1.55!important;color:rgba(255,255,255,.6)!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-body{display:flex!important;align-items:center;gap:12px!important;margin:0!important;padding:0 0 10px!important;
+  background:none!important;box-shadow:none!important;border:0!important;border-bottom:1px solid rgba(255,255,255,.35)!important;border-radius:0!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-body:focus-within{border-bottom-color:#FF9800!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-field-element{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;
+  padding:6px 0!important;font-size:15px!important;color:#fff!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-field-element::placeholder{color:rgba(255,255,255,.4)!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-button-wrapper{margin:0!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-button{height:40px!important;padding:0 22px!important;border-radius:999px!important;background:#FF9800!important;color:#0b0907!important;
+  font-size:12px!important;font-weight:700!important;letter-spacing:.16em!important;white-space:nowrap;box-shadow:none!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-button:hover{background:#fff!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-footnote{display:none!important}
+section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-footnote p{margin:0!important;font-size:11px!important;text-align:left!important;color:rgba(255,255,255,.4)!important}
+
+html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 form.newsletter-form .newsletter-form-field-wrapper input.newsletter-form-field-element.field-element{background:transparent!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:6px 0!important;font-size:15px!important;color:#fff!important}
+
+/* newsletter box: email + sign up centred on the right, full column width */
+html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 .newsletter-form-body{align-self:center!important;justify-self:stretch!important;width:100%!important;max-width:none!important;padding:0 0 8px!important}
+html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 .newsletter-form-fields-wrapper{flex:1 1 auto!important;width:auto!important}
+html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 .newsletter-form-field-wrapper,html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 input.newsletter-form-field-element{width:100%!important}
+html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 .newsletter-form-button-wrapper{flex:0 0 auto!important;margin:0!important}
+html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 .newsletter-form-header-description p{font-size:13px!important;line-height:1.5!important;margin:4px 0 0!important;max-width:440px}
+@media (min-width:768px){
+  html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 .newsletter-form-header{grid-column:1!important;grid-row:1!important;align-self:center!important}
+  html body section[data-section-id="69ede6784583922c0294b79c"] #block-yui_3_17_2_1_1791036395419_4763 .newsletter-form-body{grid-column:2!important;grid-row:1!important}
+}
+
+@media (max-width:767px){
+  .kig-head{grid-template-columns:1fr;gap:18px;margin-bottom:24px}
+  .kig-side{max-width:none}
+  .kig-arrow{display:none}
+  .kig-track{gap:10px;padding-right:20px}
+  .kig-card{flex-basis:72vw}
+  .kig-cap span{max-height:3.2em;opacity:1}
+  section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form{grid-template-columns:1fr}
+  section[data-section-id="69ede6784583922c0294b79c"] .fe-block .sqs-block.sqs-block-newsletter .newsletter-form-footnote{grid-column:1}
+}
+@media (prefers-reduced-motion:reduce){.kig *{transition:none!important}.kig-track{scroll-behavior:auto}}
+</style>
+
+<script>
+(function(){
+  // the Instagram block sits after this code block in the page, so wait for the whole page to be parsed
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',arguments.callee);return}
+  var root=document.getElementById('kompasIG'); if(!root||root.dataset.ready) return; root.dataset.ready=1;
+  var sec=root.closest('section[data-section-id]'), track=document.getElementById('kigTrack'), fill=document.getElementById('kigFill');
+  var IG='https://www.instagram.com/kompaswatch/';
+  // newsletter copy (the block itself still stores sign-ups in Squarespace)
+  var nl=sec&&sec.querySelector('.sqs-block-newsletter');
+  if(nl){var nt=nl.querySelector('.newsletter-form-header-title'),nd=nl.querySelector('.newsletter-form-header-description p');
+    if(nt)nt.textContent='Be first when East and West return';
+    if(nd)nd.textContent='Restock alerts, new releases and stories from the RAF operations room. No spam, unsubscribe anytime.';}
+  // the newsletter box lines up under the trust boxes above it (same width, small gap)
+  function align(){
+    if(window.self!==window.top)return;
+    var w=nl&&nl.querySelector('.newsletter-form-wrapper'),tr=document.querySelector('.ksh-trust');if(!w||!tr)return;
+    ['margin-left','margin-top','width'].forEach(function(k){w.style.removeProperty(k)});
+    var a=tr.getBoundingClientRect(),b=w.getBoundingClientRect();
+    w.style.setProperty('margin-left',(a.left-b.left)+'px','important');
+    w.style.setProperty('width',a.width+'px','important');w.style.setProperty('max-width','none','important');
+    w.style.setProperty('margin-top',(12-(b.top-a.bottom))+'px','important');
+  }
+  align();window.addEventListener('resize',align);window.addEventListener('load',align);
+  var GLYPH='<svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>';
+  function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML}
+  function decode(s){var d=document.createElement('textarea');d.innerHTML=s||'';return d.value}
+  function split(t){
+    t=decode(t).replace(/[\u{1F1E6}-\u{1F1FF}\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}]/gu,'').replace(/\s+/g,' ').trim();
+    var m=t.match(/^(.{12,72}?[.!?])(\s|$)/);              // first sentence as the headline
+    if(m)return {head:m[1].replace(/\.$/,''),rest:t.slice(m[0].length)};
+    var w=t.split(' ');return {head:w.slice(0,8).join(' ')+(w.length>8?'…':''),rest:w.slice(8).join(' ')};
+  }
+
+  // posts come from the site's own Instagram block, so the showcase updates with every new post
+  var slides=sec?[].slice.call(sec.querySelectorAll('.sqs-block-instagram .slide')):[];
+  slides.forEach(function(s){
+    var a=s.querySelector('a[href*="instagram.com"]'), im=s.querySelector('img'); if(!a||!im) return;
+    var src=im.getAttribute('data-src')||im.getAttribute('src')||''; if(!src) return;
+    if(!/format=/.test(src)) src+=(src.indexOf('?')<0?'?':'&')+'format=750w';
+    var c=split(im.getAttribute('alt'));
+    var card=document.createElement('a');card.className='kig-card';card.href=a.href;card.target='_blank';card.rel='noopener';
+    card.innerHTML='<img src="'+src+'" alt="'+esc(c.head)+'" loading="lazy"><span class="kig-ico">'+GLYPH+'</span>'+
+      '<span class="kig-cap"><b>'+esc(c.head)+'</b><span>'+esc(c.rest)+'</span><em>View on Instagram ↗</em></span>';
+    track.appendChild(card);
+  });
+  var f=document.createElement('a');f.className='kig-card is-follow';f.href=IG;f.target='_blank';f.rel='noopener';
+  f.innerHTML=GLYPH+'<span><b>More on<br>@kompaswatch</b><em>Follow ↗</em></span>';
+  track.appendChild(f);
+
+  // endless slow drift; pauses on hover or touch, and people can still swipe through it.
+  // Not inside the Squarespace editor (the page is framed there), where it would fight the editor.
+  if(window.self!==window.top) return;
+  [].slice.call(track.children).forEach(function(c){var k=c.cloneNode(true);k.setAttribute('aria-hidden','true');k.tabIndex=-1;track.appendChild(k)});
+  var paused=false,pos=0,last=0,reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  ['mouseenter','touchstart','focusin'].forEach(function(e){track.addEventListener(e,function(){paused=true},{passive:true})});
+  ['mouseleave','touchend','focusout'].forEach(function(e){track.addEventListener(e,function(){paused=false;pos=track.scrollLeft},{passive:true})});
+  function tick(t){
+    var dt=last?Math.min(t-last,50):16,half=track.scrollWidth/2;last=t;
+    if(!paused&&!reduce){pos+=dt*0.035;if(pos>=half)pos-=half;track.scrollLeft=pos}
+    else if(track.scrollLeft>=half){track.scrollLeft-=half;pos=track.scrollLeft}
+    requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+
+<!-- Backup of the previous Community block (inert). To restore: replace everything above with the contents of this template. -->
+<template data-kompas-backup="community-v1">
+<!-- KOMPAS — COMMUNITY (Code Block). Instagram first. Sits directly above the Instagram and Newsletter blocks. No script. -->
+<style>
+  .kc2{--o:#FF9800;--w:#fff;--m:rgba(255,255,255,.72);--l:rgba(255,255,255,.12);font-family:"Public Sans",sans-serif;max-width:1200px;margin:0 auto;padding:40px 0 8px;color:var(--w)}
+  .kc2 *,.kc2 *::before,.kc2 *::after{box-sizing:border-box}
+  .kc2 :where(h2,p,ul){margin:0!important;padding:0!important}
+  .kc2-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end}
+  .kc2-k{display:flex;align-items:center;gap:14px;font-size:12px!important;font-weight:600!important;letter-spacing:.2em!important;text-transform:uppercase;color:var(--o)!important;line-height:1.3!important}
+  .kc2-k::before{content:"";width:28px;height:1px;background:var(--o)}
+  .kc2-title{margin-top:18px!important;font-family:"Public Sans",sans-serif!important;font-size:clamp(44px,6vw,84px)!important;font-weight:700!important;line-height:1!important;letter-spacing:-.02em!important;color:var(--w)!important;text-transform:none!important}
+  .kc2-title span{display:block;color:var(--o)}
+  .kc2-body{font-size:17px!important;line-height:1.6!important;color:var(--m)!important;max-width:34em}
+  .kc2-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px;margin-top:26px}
+  .kc2-btn{display:inline-flex;align-items:center;gap:12px;padding:17px 30px;border-radius:999px;background:var(--o);background-image:none!important;color:#0b0907!important;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;line-height:1;text-decoration:none!important;transition:background-color .25s ease}
+  .kc2-btn:hover{background:#fff}
+  .kc2-btn i{font-style:normal;transition:transform .25s ease}
+  .kc2-btn:hover i{transform:translateX(4px)}
+  .kc2-link{font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--w)!important;text-decoration:none!important;background-image:none!important;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:4px;transition:color .25s ease,border-color .25s ease}
+  .kc2-link:hover{color:var(--o)!important;border-color:var(--o)}
+  .kc2-foot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px 40px;margin-top:48px;padding-top:22px;border-top:1px solid var(--l);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--m)}
+  .kc2-foot ul{display:flex;flex-wrap:wrap;gap:10px 34px;list-style:none}
+  .kc2-foot li{margin:0!important;padding:0!important}
+  .kc2-foot li::before{display:none!important}
+  .kc2-foot a{color:var(--w)!important;text-decoration:none!important;background-image:none!important;transition:color .25s ease}
+  .kc2-foot a:hover{color:var(--o)!important}
+  @media (max-width:860px){.kc2-grid{grid-template-columns:1fr;gap:22px}.kc2-btn{width:100%;justify-content:center}}
+</style>
+
+<div class="kc2">
+  <div class="kc2-grid">
+    <div>
+      <p class="kc2-k">Instagram</p>
+      <h2 class="kc2-title" style="font-size:clamp(30px,3.4vw,46px)!important">Seen On <span>The Wrist</span></h2>
+    </div>
+    <div>
+      <p class="kc2-body">New releases, restocks and the places KOMPAS has been, first on @kompaswatch.</p>
+      <div class="kc2-actions">
+        <a class="kc2-btn" href="https://www.instagram.com/kompaswatch/" target="_blank" rel="noopener">Follow @kompaswatch <i>→</i></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+</template>
+
+  
+  
+
+
+
+</div>
+
+<style class="transform-vars">
+    .fe-block-yui_3_17_2_1_1790984131233_2568 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+      --block-transform: none;
+
+      opacity: var(--opacity, 1);
+      transform: var(--block-transform);
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style><style class="transform-overrides-vars">
+  
+</style>
+

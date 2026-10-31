@@ -1,0 +1,345 @@
+<!-- page /home section 69dbe138a22c6f79f15b7ad9 block block-yui_3_17_2_1_1790971858480_9641 -->
+
+  
+
+<div class="sqs-code-container" data-localized="{&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}">
+  
+    <!-- =====================================================
+     KOMPAS — PRODUCT MENU (Squarespace Code Block)
+     Pure HTML + CSS, no script.
+     ===================================================== -->
+<style>
+  /* ---- section header: title left, "Shop All" right ---- */
+  .kp-head {
+    font-family: "Public Sans", sans-serif;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 24px;
+    margin: 0 0 36px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .kp-head-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 14px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: #FF9800 !important;
+  }
+
+  .kp-head-label::before {
+    content: "";
+    width: 28px;
+    height: 1px;
+    background: #FF9800;
+    opacity: 0.6;
+  }
+
+  .kp-head-title {
+    margin: 0 0 10px !important;
+    font-size: clamp(30px, 3.4vw, 46px) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    color: #FFFFFF !important;
+  }
+
+  .kp-head-title span {
+    color: #FF9800 !important;
+  }
+
+  .kp-head-copy {
+    max-width: 520px;
+    margin: 0 !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: rgba(255, 255, 255, 0.72) !important;
+  }
+
+  .kp-all {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex: 0 0 auto;
+    padding-bottom: 3px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #FFFFFF !important;
+    text-decoration: none !important;
+    background-image: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+
+  .kp-all i {
+    font-style: normal;
+    transition: transform 0.25s ease;
+  }
+
+  .kp-all:hover,
+  .kp-all:focus-visible {
+    color: #FF9800 !important;
+    border-color: #FF9800;
+  }
+
+  .kp-all:hover i,
+  .kp-all:focus-visible i {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 640px) {
+    .kp-head {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .kp {
+    --kp-orange: #FF9800;
+    --kp-white: #FFFFFF;
+    --kp-muted: rgba(255, 255, 255, 0.72);
+    --kp-line: rgba(255, 255, 255, 0.12);
+    font-family: "Public Sans", sans-serif;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .kp-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 0 22px;
+    border-bottom: 1px solid var(--kp-line);
+    color: var(--kp-white) !important;
+    text-decoration: none !important;
+    background-image: none !important;
+    transition: border-color 0.3s ease;
+  }
+
+  .kp-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+
+  .kp-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.5s ease;
+  }
+
+  .kp-dir {
+    margin: 0 0 6px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--kp-white);
+    line-height: 1;
+  }
+
+  .kp-strap {
+    margin: 0 0 12px;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--kp-muted);
+    line-height: 1;
+  }
+
+  .kp-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    line-height: 1;
+  }
+
+  .kp-price {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--kp-orange);
+  }
+
+  /* hover (available only) */
+  .kp-card:not(.is-sold):hover {
+    border-color: var(--kp-orange);
+  }
+
+  .kp-card:not(.is-sold):hover .kp-img img {
+    transform: scale(1.04);
+  }
+
+  /* ---- Sold out: East (green) + West (red) ---- */
+  .kp-card.is-sold .kp-img img {
+    opacity: 0.4;
+    filter: grayscale(60%);
+  }
+
+  .kp-card.is-sold .kp-price {
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: line-through;
+  }
+
+  .kp-sold {
+    padding: 5px 9px;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--kp-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  /* "Shop →" next to the price on available watches */
+  .kp-shop {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--kp-white);
+    transition: color 0.25s ease;
+  }
+
+  .kp-shop i {
+    font-style: normal;
+    transition: transform 0.25s ease;
+  }
+
+  .kp-card:hover .kp-shop {
+    color: var(--kp-orange);
+  }
+
+  .kp-card:hover .kp-shop i {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 900px) {
+    .kp {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px 16px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kp-card,
+    .kp-img img {
+      transition: none;
+    }
+  }
+</style>
+
+<div class="kp-head">
+  <div>
+    <p class="kp-head-label">The Collection</p>
+    <h1 class="kp-head-title">Automatic <span>Field Watches</span></h1>
+    <p class="kp-head-copy">Four directions: North, East, South and West. Designed in Great Britain, our automatic field watches take inspiration from the RAF sector clock.</p>
+  </div>
+  <a class="kp-all" href="/watches">Shop All <i>→</i></a>
+</div>
+
+<div class="kp">
+  <a class="kp-card" href="/watches/p/north">
+    <div class="kp-img">
+      <img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c03506eb81c8c8cc76e/1792965635231/k-front-north.webp" alt="Kompas North, black rubber strap" loading="lazy">
+    </div>
+    <p class="kp-dir">North</p>
+    <p class="kp-strap">Black Rubber</p>
+    <div class="kp-meta">
+      <span class="kp-price">£535.00</span>
+      <span class="kp-shop">Shop <i>→</i></span>
+    </div>
+  </a>
+
+  <a class="kp-card is-sold" href="/watches/p/east">
+    <div class="kp-img">
+      <img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c02da0da518ca30f3f2/1792965634206/k-front-east.webp" alt="Kompas East, green rubber strap (sold out)" loading="lazy">
+    </div>
+    <p class="kp-dir">East</p>
+    <p class="kp-strap">Green Rubber</p>
+    <div class="kp-meta">
+      <span class="kp-price">£535.00</span>
+      <span class="kp-sold">Sold Out</span>
+    </div>
+  </a>
+
+  <a class="kp-card" href="/watches/p/south">
+    <div class="kp-img">
+      <img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c04bb40327d62a1f4f8/1792965636222/k-front-south.webp" alt="Kompas South, blue rubber strap" loading="lazy">
+    </div>
+    <p class="kp-dir">South</p>
+    <p class="kp-strap">Blue Rubber</p>
+    <div class="kp-meta">
+      <span class="kp-price">£535.00</span>
+      <span class="kp-shop">Shop <i>→</i></span>
+    </div>
+  </a>
+
+  <a class="kp-card is-sold" href="/watches/p/west">
+    <div class="kp-img">
+      <img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c0525d53e257d80c9de/1792965637239/k-front-west.webp" alt="Kompas West, red rubber strap (sold out)" loading="lazy">
+    </div>
+    <p class="kp-dir">West</p>
+    <p class="kp-strap">Red Rubber</p>
+    <div class="kp-meta">
+      <span class="kp-price">£535.00</span>
+      <span class="kp-sold">Sold Out</span>
+    </div>
+  </a>
+</div>
+
+
+  
+  
+
+
+
+</div>
+
+<style class="transform-vars">
+    .fe-block-yui_3_17_2_1_1790971858480_9641 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+      --block-transform: none;
+
+      opacity: var(--opacity, 1);
+      transform: var(--block-transform);
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style><style class="transform-overrides-vars">
+  
+</style>
+

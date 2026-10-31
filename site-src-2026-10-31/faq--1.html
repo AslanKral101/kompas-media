@@ -1,0 +1,681 @@
+<!-- page /faq section 69a4b45437125a6a0140327b block block-yui_3_17_2_1_1791028108753_4765 -->
+
+  
+
+<div class="sqs-code-container" data-localized="{&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}">
+  
+    <!-- =====================================================
+     KOMPAS — FAQ / HELP CENTRE (one Code Block for the whole page)
+     Header + contact · quick facts · topic nav · 6 topics with
+     accordions (native <details>, no script). Same type system
+     as the home and history pages.
+     ===================================================== -->
+<style>
+  .kfq {
+    --o: #FF9800;
+    --w: #FFFFFF;
+    --m: rgba(255, 255, 255, 0.72);
+    --f: rgba(255, 255, 255, 0.45);
+    --l: rgba(255, 255, 255, 0.12);
+    --r: 10px;
+    font-family: "Public Sans", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    color: var(--w);
+  }
+  .kfq *, .kfq *::before, .kfq *::after { box-sizing: border-box; }
+  .kfq :where(h1, h2, h3, h4, p, ul, ol) { margin: 0 !important; padding: 0 !important; }
+  .kfq :where(li)::before { display: none; }
+  .kfq a { color: var(--o) !important; text-decoration: none !important; background-image: none !important; }
+  .kfq a:hover { text-decoration: underline !important; }
+
+  /* shared type */
+  .kfq-k {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--o) !important;
+  }
+  .kfq-k::before { content: ""; width: 28px; height: 1px; background: var(--o); opacity: 0.6; }
+  .kfq-h {
+    font-size: clamp(28px, 3.2vw, 42px) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    color: var(--w) !important;
+  }
+  .kfq-h span { color: var(--o); }
+  .kfq-p { font-size: 16px !important; line-height: 1.7 !important; color: var(--m) !important; }
+  .kfq-small {
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.14em !important;
+    text-transform: uppercase;
+    color: var(--f) !important;
+  }
+
+  /* ---- header ---- */
+  .kfq-head {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: end;
+    gap: 64px;
+    margin-bottom: 48px;
+  }
+  .kfq-head .kfq-k { margin-bottom: 22px !important; }
+  .kfq-head .kfq-h { font-size: clamp(40px, 6vw, 84px) !important; line-height: 0.96 !important; letter-spacing: -0.035em !important; }
+
+  /* contact cards */
+  .kfq-contact { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 24px; }
+  .kfq-contact a {
+    display: grid;
+    gap: 6px;
+    padding: 18px 20px;
+    border: 1px solid var(--l);
+    border-radius: var(--r);
+    background: rgba(255, 255, 255, 0.02);
+    color: var(--w) !important;
+    text-decoration: none !important;
+    transition: border-color 0.25s ease, background-color 0.25s ease;
+  }
+  .kfq-contact a:hover { border-color: var(--o); background: rgba(255, 152, 0, 0.05); text-decoration: none !important; }
+  .kfq-contact b { font-size: 14px; font-weight: 600; overflow-wrap: anywhere; }
+
+  /* ---- quick facts ---- */
+  .kfq-facts {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 40px;
+    border: 1px solid var(--l);
+    border-radius: var(--r);
+  }
+  .kfq-facts > div { padding: 24px; }
+  .kfq-facts > div + div { border-left: 1px solid var(--l); }
+  .kfq-facts strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: clamp(28px, 2.8vw, 38px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+  .kfq-facts strong small { font-size: 0.5em; color: var(--o); }
+
+  /* ---- topic nav ---- */
+  .kfq-nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 96px !important; list-style: none; }
+  .kfq-nav li { margin: 0 !important; padding: 0 !important; }
+  .kfq-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--w) !important;
+    border: 1px solid var(--l);
+    border-radius: 999px;
+    transition: border-color 0.25s ease, color 0.25s ease;
+  }
+  .kfq-nav a i { font-style: normal; color: var(--o); }
+  .kfq-nav a:hover { border-color: var(--o); color: var(--o) !important; text-decoration: none !important; }
+
+  /* ---- topics ---- */
+  .kfq-topic {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 64px;
+    padding: 48px 0 96px;
+    border-top: 1px solid var(--l);
+    scroll-margin-top: 110px;
+  }
+  .kfq-side { display: grid; gap: 16px; align-content: start; }
+  .kfq-num { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; color: var(--f); }
+  .kfq-side .kfq-p { max-width: 360px; font-size: 15px !important; }
+
+  /* accordion */
+  .kfq-acc { border-top: 1px solid var(--l); }
+  .kfq-acc details { border-bottom: 1px solid var(--l); }
+  .kfq-acc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 22px 0;
+    cursor: pointer;
+    list-style: none;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.35;
+    color: var(--w);
+    transition: color 0.25s ease;
+  }
+  .kfq-acc summary::-webkit-details-marker { display: none; }
+  .kfq-acc summary:hover,
+  .kfq-acc details[open] > summary { color: var(--o); }
+  .kfq-acc summary i {
+    position: relative;
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+  }
+  .kfq-acc summary i::before,
+  .kfq-acc summary i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 6.5px;
+    width: 14px;
+    height: 1px;
+    background: currentColor;
+    transition: transform 0.3s ease;
+  }
+  .kfq-acc summary i::after { transform: rotate(90deg); }
+  .kfq-acc details[open] > summary i::after { transform: rotate(0deg); }
+  .kfq-a { display: grid; gap: 12px; padding: 0 40px 26px 0; }
+  .kfq-a p, .kfq-a li { font-size: 15px !important; line-height: 1.7 !important; color: var(--m) !important; }
+  .kfq-a strong { font-weight: 600; color: var(--w); }
+  .kfq-a ul { display: grid; gap: 6px; list-style: none; }
+  .kfq-a ul li { position: relative; margin: 0 !important; padding: 0 0 0 20px !important; }
+  .kfq-a ul li::before {
+    content: "" !important;
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 10px;
+    height: 1px;
+    background: var(--o);
+  }
+  .kfq-a h4 {
+    margin-top: 10px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--w) !important;
+  }
+  .kfq-legal { max-height: 520px; overflow-y: auto; padding-right: 16px !important; }
+
+  /* closing */
+  .kfq-end {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 32px;
+    padding: 40px;
+    border: 1px solid var(--l);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .kfq .kfq-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: #000 !important;
+    background: var(--o) !important;
+    border: 1px solid var(--o) !important;
+    border-radius: 999px;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+  .kfq .kfq-btn:hover { color: #000 !important; background: var(--w) !important; border-color: var(--w) !important; text-decoration: none !important; }
+
+  /* responsive */
+  @media (max-width: 1000px) {
+    .kfq-head, .kfq-topic { grid-template-columns: 1fr; gap: 28px; }
+    .kfq-facts { grid-template-columns: repeat(2, 1fr); }
+    .kfq-facts > div:nth-child(3) { border-left: 0; }
+    .kfq-facts > div:nth-child(n+3) { border-top: 1px solid var(--l); }
+  }
+  @media (max-width: 640px) {
+    .kfq-contact { grid-template-columns: 1fr; }
+    .kfq-nav { margin-bottom: 64px !important; }
+    .kfq-topic { padding: 36px 0 64px; }
+    .kfq-acc summary { font-size: 16px; }
+    .kfq-a { padding-right: 0; }
+    .kfq-end { grid-template-columns: 1fr; padding: 28px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .kfq * { transition: none !important; }
+  }
+</style>
+
+<div class="kfq">
+
+  <!-- HEADER -->
+  <header class="kfq-head">
+    <div>
+      <p class="kfq-k">Help Centre</p>
+      <h1 class="kfq-h">Questions, <span>Answered</span></h1>
+    </div>
+    <div>
+      <p class="kfq-p">Everything about your Kompas, from the dial to delivery. Can't find what you need? Talk to us directly.</p>
+      <div class="kfq-contact">
+        <a href="mailto:contact@kompaswatches.com"><span class="kfq-small">Email</span><b>contact@kompaswatches.com</b></a>
+        <a href="https://www.instagram.com/kompaswatch/" target="_blank" rel="noopener"><span class="kfq-small">Instagram</span><b>@kompaswatch</b></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- QUICK FACTS -->
+  <div class="kfq-facts">
+    <div><strong>100<small>m</small></strong><span class="kfq-small">Water resistance</span></div>
+    <div><strong>2<small>yr</small></strong><span class="kfq-small">International warranty</span></div>
+    <div><strong>14<small>days</small></strong><span class="kfq-small">Right to cancel</span></div>
+    <div><strong>20<small>mm</small></strong><span class="kfq-small">Quick release straps</span></div>
+  </div>
+
+  <!-- TOPIC NAV -->
+  <ul class="kfq-nav">
+    <li><a href="#kfq-watch"><i>01</i>The Watch</a></li>
+    <li><a href="#kfq-shipping"><i>02</i>Shipping</a></li>
+    <li><a href="#kfq-returns"><i>03</i>Returns</a></li>
+    <li><a href="#kfq-warranty"><i>04</i>Warranty</a></li>
+    <li><a href="#kfq-care"><i>05</i>Care</a></li>
+    <li><a href="#kfq-legal"><i>06</i>Legal</a></li>
+  </ul>
+
+  <!-- 01 THE WATCH -->
+  <section class="kfq-topic" id="kfq-watch">
+    <div class="kfq-side">
+      <span class="kfq-num">01</span>
+      <h2 class="kfq-h">The <span>Watch</span></h2>
+      <p class="kfq-p">Design, specifications and what makes a Kompas different.</p>
+    </div>
+    <div class="kfq-acc">
+      <details name="kfq-watch" open="">
+        <summary>What makes KOMPAS watches unique? <i></i></summary>
+        <div class="kfq-a"><p>KOMPAS watches are inspired by the RAF Sector Clock, a historic military tool used for precision coordination. Our dials feature bold, colour coded triangular markers in five minute intervals: a functional design reborn as a modern timepiece for adventure, resilience and purpose.</p></div>
+      </details>
+      <details name="kfq-watch">
+        <summary>Is it KOMPAS or Kompass? <i></i></summary>
+        <div class="kfq-a"><p>It is KOMPAS, with one S. People often search for us as Kompass watch, Kompas watch or Kompas saat, and they all lead here: KOMPAS Watches, the British-designed automatic field watch brand at kompaswatches.com and @kompaswatch on Instagram. We are not connected to other companies with a similar name. The name comes from the compass: our four watches are North, East, South and West.</p></div>
+      </details>
+      <details name="kfq-watch">
+        <summary>Are KOMPAS watches water resistant? <i></i></summary>
+        <div class="kfq-a"><p>Yes. Every KOMPAS model is rated to <strong>100m</strong>, built for everyday use and outdoor activities, from rain to swimming and challenging conditions.</p></div>
+      </details>
+      <details name="kfq-watch">
+        <summary>Do KOMPAS watches have luminous features? <i></i></summary>
+        <div class="kfq-a"><p>Yes. We use high grade Super-LumiNova® on the hands and markers for excellent readability in low light, ideal for night time use and outdoor adventures.</p></div>
+      </details>
+      <details name="kfq-watch">
+        <summary>Are the straps interchangeable? <i></i></summary>
+        <div class="kfq-a"><p>Yes. All KOMPAS watches use a standard <strong>20mm</strong> lug width with quick release spring bars, so you can swap straps in seconds to match your style or activity. Every watch ships with both a rubber and a nylon strap.</p></div>
+      </details>
+      <details name="kfq-watch">
+        <summary>Where are KOMPAS watches assembled? <i></i></summary>
+        <div class="kfq-a"><p>KOMPAS watches are designed in Great Britain, powered by precise Japanese movements and assembled in Hong Kong by skilled watchmakers, ensuring consistent quality and reliability.</p></div>
+      </details>
+      <details name="kfq-watch">
+        <summary>What makes KOMPAS packaging special? <i></i></summary>
+        <div class="kfq-a"><p>Each watch comes in durable, dial inspired packaging designed for reuse. It's more than a box: it's a keepsake that reflects the brand's adventurous spirit.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 02 SHIPPING -->
+  <section class="kfq-topic" id="kfq-shipping">
+    <div class="kfq-side">
+      <span class="kfq-num">02</span>
+      <h2 class="kfq-h">Shipping &amp; <span>Delivery</span></h2>
+      <p class="kfq-p">Where we ship, how long it takes and what to expect at customs.</p>
+    </div>
+    <div class="kfq-acc">
+      <details name="kfq-ship" open="">
+        <summary>Where do you deliver? <i></i></summary>
+        <div class="kfq-a"><p>We ship within the United Kingdom and internationally.</p></div>
+      </details>
+      <details name="kfq-ship">
+        <summary>How long will delivery take? <i></i></summary>
+        <div class="kfq-a">
+          <ul>
+            <li><strong>United Kingdom:</strong> 3 to 5 business days</li>
+            <li><strong>International:</strong> 7 to 14 business days</li>
+          </ul>
+          <p>Delivery times are estimates and may vary due to customs or courier delays.</p>
+        </div>
+      </details>
+      <details name="kfq-ship">
+        <summary>How much is shipping? <i></i></summary>
+        <div class="kfq-a"><p>Standard tracked shipping is free. The cost of any upgraded shipping option is shown at checkout.</p></div>
+      </details>
+      <details name="kfq-ship">
+        <summary>Will I pay import duties or taxes? <i></i></summary>
+        <div class="kfq-a">
+          <p>International orders may be subject to import duties, VAT and local taxes. These charges are the responsibility of the customer unless otherwise stated at checkout.</p>
+          <p>If a shipment is refused due to unpaid duties:</p>
+          <ul>
+            <li>The item must be returned to us</li>
+            <li>Outbound and return shipping costs may be deducted</li>
+            <li>A refund will be processed once the watch is received and inspected</li>
+          </ul>
+        </div>
+      </details>
+      <details name="kfq-ship">
+        <summary>When does the order become mine? <i></i></summary>
+        <div class="kfq-a"><p>Risk transfers to you upon confirmed delivery to the address provided at checkout. Please make sure your delivery details are accurate.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 03 RETURNS -->
+  <section class="kfq-topic" id="kfq-returns">
+    <div class="kfq-side">
+      <span class="kfq-num">03</span>
+      <h2 class="kfq-h">Returns &amp; <span>Refunds</span></h2>
+      <p class="kfq-p">Changed your mind or received a faulty watch? Here is how it works.</p>
+    </div>
+    <div class="kfq-acc">
+      <details name="kfq-ret" open="">
+        <summary>Can I return or exchange my watch? <i></i></summary>
+        <div class="kfq-a">
+          <p>Yes. In accordance with the UK Consumer Contracts Regulations, you have the right to cancel your order within <strong>14 days</strong> of receiving your watch, for any reason. Notify us within this period, then you have a further 14 days to return the item. Exchanges are also available if you prefer a different model.</p>
+          <p>To cancel, contact us at <a href="mailto:contact@kompaswatches.com">contact@kompaswatches.com</a>.</p>
+        </div>
+      </details>
+      <details name="kfq-ret">
+        <summary>What condition must the watch be in? <i></i></summary>
+        <div class="kfq-a">
+          <p>Returned items must be:</p>
+          <ul>
+            <li>Unworn and unused</li>
+            <li>In original condition, with all protective films intact</li>
+            <li>Returned in original packaging</li>
+            <li>Accompanied by all documentation and accessories</li>
+          </ul>
+          <p>You may inspect the watch as you would in a shop. Handling beyond what is needed to assess it may lead to a deduction reflecting any diminished value, for example wear, strap creasing, removed films or scratches.</p>
+        </div>
+      </details>
+      <details name="kfq-ret">
+        <summary>Who pays for return shipping? <i></i></summary>
+        <div class="kfq-a"><p>For change of mind cancellations, you are responsible for return shipping costs. If the item is faulty or not as described, we cover reasonable return shipping costs.</p></div>
+      </details>
+      <details name="kfq-ret">
+        <summary>When will I get my refund? <i></i></summary>
+        <div class="kfq-a">
+          <p>Refunds are issued within 14 days of receiving the returned goods, or of receiving proof that they have been returned. Refunds go to the original payment method.</p>
+          <p>Original standard outbound shipping is refundable where required by law. Upgraded or express shipping is non refundable.</p>
+        </div>
+      </details>
+      <details name="kfq-ret">
+        <summary>What if my watch is faulty? <i></i></summary>
+        <div class="kfq-a">
+          <p>Your rights under the Consumer Rights Act 2015 are not affected. If your watch develops a fault:</p>
+          <ul>
+            <li>You have a 30 day right to reject for a full refund</li>
+            <li>After 30 days, we may offer repair or replacement</li>
+            <li>If repair or replacement is unsuccessful, you may be entitled to a refund or price reduction</li>
+          </ul>
+          <p>We may request reasonable evidence of the fault before proceeding.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 04 WARRANTY -->
+  <section class="kfq-topic" id="kfq-warranty">
+    <div class="kfq-side">
+      <span class="kfq-num">04</span>
+      <h2 class="kfq-h">2 Year <span>Warranty</span></h2>
+      <p class="kfq-p">Every KOMPAS is covered by a 2 year international warranty from the date of delivery.</p>
+    </div>
+    <div class="kfq-acc">
+      <details name="kfq-war" open="">
+        <summary>What does the warranty cover? <i></i></summary>
+        <div class="kfq-a">
+          <p>Manufacturing defects in the:</p>
+          <ul>
+            <li>Movement</li>
+            <li>Dial</li>
+            <li>Hands</li>
+            <li>Case construction</li>
+            <li>Factory water resistance integrity</li>
+          </ul>
+          <p>In the rare event of an issue, we will repair or replace your timepiece.</p>
+        </div>
+      </details>
+      <details name="kfq-war">
+        <summary>What is not covered? <i></i></summary>
+        <div class="kfq-a">
+          <ul>
+            <li>Accidental, impact or drop damage</li>
+            <li>Cosmetic wear, including scratches and dents</li>
+            <li>Strap wear</li>
+            <li>Water damage caused by improper crown use</li>
+            <li>Damage caused by unauthorised repairs or modifications</li>
+            <li>Normal wear and tear</li>
+          </ul>
+        </div>
+      </details>
+      <details name="kfq-war">
+        <summary>How do I make a claim? <i></i></summary>
+        <div class="kfq-a">
+          <p>Email <a href="mailto:contact@kompaswatches.com">contact@kompaswatches.com</a> with:</p>
+          <ul>
+            <li>Your order number</li>
+            <li>A description of the issue</li>
+            <li>Clear photographs</li>
+            <li>Proof of purchase</li>
+          </ul>
+        </div>
+      </details>
+      <details name="kfq-war">
+        <summary>Who pays shipping for warranty service? <i></i></summary>
+        <div class="kfq-a">
+          <p>If the issue is confirmed under warranty, we cover return shipping following approval. If it is not covered, we will send a repair estimate before proceeding.</p>
+          <p>Repair timelines vary depending on parts availability and location.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 05 CARE -->
+  <section class="kfq-topic" id="kfq-care">
+    <div class="kfq-side">
+      <span class="kfq-num">05</span>
+      <h2 class="kfq-h">Care &amp; <span>Service</span></h2>
+      <p class="kfq-p">A few simple habits keep your KOMPAS performing for years.</p>
+    </div>
+    <div class="kfq-acc">
+      <details name="kfq-care" open="">
+        <summary>How do I take care of my KOMPAS? <i></i></summary>
+        <div class="kfq-a">
+          <ul>
+            <li>Rinse with fresh water after saltwater exposure</li>
+            <li>Keep the crown fully secured before water contact</li>
+            <li>Clean with a soft cloth and mild soap only</li>
+            <li>Avoid strong impacts or dropping the watch</li>
+            <li>Avoid extreme heat, prolonged extreme temperatures and strong magnetic fields</li>
+            <li>Store in a dry place when not in use</li>
+          </ul>
+        </div>
+      </details>
+      <details name="kfq-care">
+        <summary>How often should it be serviced? <i></i></summary>
+        <div class="kfq-a"><p>Have your watch serviced every <strong>3 to 5 years</strong> by a professional watchmaker to maintain performance.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <!-- 06 LEGAL -->
+  <section class="kfq-topic" id="kfq-legal">
+    <div class="kfq-side">
+      <span class="kfq-num">06</span>
+      <h2 class="kfq-h">Terms &amp; <span>Privacy</span></h2>
+      <p class="kfq-p">The full legal terms for buying from KOMPAS and how we handle your data.</p>
+    </div>
+    <div class="kfq-acc">
+      <details name="kfq-legal">
+        <summary>Terms and Conditions <i></i></summary>
+        <div class="kfq-a kfq-legal">
+          <h4>1. Company Information</h4>
+          <p>This website is operated by Oral and Co Fine Goods Ltd, registered in England and Wales under company number 16552492. Registered office: 71 to 75 Shelton Street, London, WC2H 9JQ, United Kingdom. Throughout these terms, "we", "us" and "our" refer to KOMPAS Watches.</p>
+          <h4>2. Products</h4>
+          <p>We currently offer watches and accessories for sale within the United Kingdom and internationally. Product descriptions, images and specifications are provided for guidance. Minor variations in colour, materials or finishing may occur. We reserve the right to update specifications and pricing at any time without notice as part of continuous product improvement.</p>
+          <h4>3. Pricing and Payment</h4>
+          <p>All prices are listed in GBP and include VAT where applicable. Payment is required in full at the time of checkout. We accept major debit and credit cards and PayPal. We reserve the right to cancel any order if payment cannot be authorised or verified.</p>
+          <h4>4. Order Acceptance and Contract Formation</h4>
+          <p>An order is placed when you complete checkout and submit payment. A legally binding contract is formed once we confirm your order via email. We reserve the right to refuse or cancel any order in cases including but not limited to:</p>
+          <ul>
+            <li>Product unavailability</li>
+            <li>Pricing or listing errors</li>
+            <li>Suspected fraud or unauthorised activity</li>
+            <li>Payment processing failure</li>
+          </ul>
+          <p>If an order is cancelled, a full refund will be issued.</p>
+          <h4>5. Delivery</h4>
+          <p>We deliver within the United Kingdom and internationally. Estimated delivery times are provided at checkout and are not guaranteed. Risk transfers to you once the product has been delivered to the address provided at checkout. You are responsible for ensuring that delivery details are accurate.</p>
+          <h4>6. International Orders</h4>
+          <p>International shipments may be subject to import duties, VAT, customs fees or local taxes. These charges are the responsibility of the customer unless otherwise stated at checkout. If a shipment is refused due to unpaid duties or taxes, outbound and return shipping costs may be deducted from any refund.</p>
+          <h4>7. Right to Cancel</h4>
+          <p>Under the UK Consumer Contracts Regulations, you have the right to cancel your order within 14 days of receiving your goods. You must notify us within this period and return the goods within 14 days of cancellation. Returned items must be unused and in original condition.</p>
+          <h4>8. Faulty Goods</h4>
+          <p>Nothing in these Terms limits your statutory rights under the Consumer Rights Act 2015. If goods are faulty, you may be entitled to a repair, replacement or refund in accordance with UK law.</p>
+          <h4>9. Warranty</h4>
+          <p>All KOMPAS watches include a 2 year warranty covering manufacturing defects. The warranty does not cover accidental damage, misuse, cosmetic wear or unauthorised repairs. Full warranty details are available in our Warranty Policy.</p>
+          <h4>10. Limitation of Liability</h4>
+          <p>Nothing in these Terms excludes or limits liability for death or personal injury caused by negligence, fraud, or any matter that cannot legally be limited. To the fullest extent permitted by law, our liability shall not exceed the purchase price of the product.</p>
+          <h4>11. Privacy</h4>
+          <p>Your use of this website is also governed by our Privacy Policy and Cookie Policy.</p>
+          <h4>12. Governing Law</h4>
+          <p>These Terms and Conditions are governed by the laws of England and Wales. Any disputes shall be subject to the exclusive jurisdiction of the courts of England and Wales.</p>
+        </div>
+      </details>
+      <details name="kfq-legal">
+        <summary>Privacy Policy <i></i></summary>
+        <div class="kfq-a kfq-legal">
+          <h4>1. Information We Collect</h4>
+          <p>We may collect and process the following types of personal data:</p>
+          <ul>
+            <li><strong>Identity Data:</strong> name, title, date of birth, gender.</li>
+            <li><strong>Contact Data:</strong> email address, billing and shipping address, phone number.</li>
+            <li><strong>Financial Data:</strong> payment card details (processed securely via third party providers; we do not store full card details).</li>
+            <li><strong>Transaction Data:</strong> details about your purchases, order history and payments.</li>
+            <li><strong>Technical Data:</strong> IP address, browser type, device identifiers, cookies and browsing behaviour.</li>
+            <li><strong>Profile Data:</strong> preferences, account details, product wishlists, marketing consents.</li>
+            <li><strong>Usage Data:</strong> information on how you use our Website, products and services.</li>
+            <li><strong>Marketing and Communications Data:</strong> your choices for receiving marketing communications from us.</li>
+          </ul>
+          <h4>2. How We Collect Your Data</h4>
+          <ul>
+            <li><strong>Direct interactions:</strong> when you place an order, create an account, sign up for newsletters, contact us or provide feedback.</li>
+            <li><strong>Automated technologies:</strong> such as cookies, server logs and analytics tools.</li>
+            <li><strong>Third parties:</strong> including payment providers, delivery services and advertising networks.</li>
+          </ul>
+          <h4>3. How We Use Your Data</h4>
+          <ul>
+            <li>To process and deliver your orders, including payment, shipping and returns.</li>
+            <li>To manage your account and provide customer service.</li>
+            <li>To personalise your shopping experience and recommend relevant products.</li>
+            <li>To send transactional emails (order confirmations, shipping updates).</li>
+            <li>To send marketing communications (if you have opted in).</li>
+            <li>To improve our Website, services and product offerings.</li>
+            <li>To detect, prevent and address fraud, security or technical issues.</li>
+            <li>To comply with legal obligations.</li>
+          </ul>
+          <h4>4. Legal Basis for Processing</h4>
+          <p>Under UK GDPR, we rely on the following lawful bases:</p>
+          <ul>
+            <li><strong>Performance of a contract:</strong> to fulfil your orders and provide services.</li>
+            <li><strong>Consent:</strong> for sending marketing emails or using non essential cookies.</li>
+            <li><strong>Legitimate interests:</strong> to improve our services, prevent fraud and analyse customer behaviour.</li>
+            <li><strong>Legal obligation:</strong> to comply with tax, accounting and regulatory requirements.</li>
+          </ul>
+          <h4>5. Sharing Your Data</h4>
+          <ul>
+            <li><strong>Service providers:</strong> such as payment processors (e.g. Stripe, PayPal), shipping couriers and IT support.</li>
+            <li><strong>Analytics and advertising providers:</strong> such as Google Analytics and Meta Ads.</li>
+            <li><strong>Professional advisers:</strong> including accountants, auditors or legal consultants.</li>
+            <li><strong>Authorities:</strong> when required by law or to protect against fraud.</li>
+          </ul>
+          <p>We never sell your personal data.</p>
+          <h4>6. International Data Transfers</h4>
+          <p>Your information may be transferred outside the UK and EEA, for example when using third party cloud services or payment processors. In such cases, we ensure appropriate safeguards are in place (e.g. Standard Contractual Clauses).</p>
+          <h4>7. Data Retention</h4>
+          <ul>
+            <li><strong>Order and transaction data:</strong> 6 years (for tax and legal compliance).</li>
+            <li><strong>Marketing data:</strong> until you withdraw consent.</li>
+            <li><strong>Account information:</strong> until you request deletion.</li>
+          </ul>
+          <h4>8. Your Rights</h4>
+          <ul>
+            <li>Right to access your personal data.</li>
+            <li>Right to correct inaccurate or incomplete data.</li>
+            <li>Right to request erasure ("right to be forgotten").</li>
+            <li>Right to restrict processing of your data.</li>
+            <li>Right to data portability.</li>
+            <li>Right to object to processing for marketing purposes.</li>
+            <li>Right to withdraw consent at any time.</li>
+          </ul>
+          <p>To exercise these rights, contact us at <a href="mailto:contact@kompaswatches.com">contact@kompaswatches.com</a>.</p>
+          <h4>9. Cookies</h4>
+          <p>Our Website uses cookies and similar technologies to improve functionality, analyse traffic and personalise content.</p>
+          <ul>
+            <li><strong>Essential cookies:</strong> required for site operation (e.g. shopping cart).</li>
+            <li><strong>Analytics cookies:</strong> help us understand how visitors use the site.</li>
+            <li><strong>Marketing cookies:</strong> allow targeted advertising.</li>
+          </ul>
+          <p>You can manage cookie preferences in your browser or via our Cookie Consent Banner.</p>
+          <h4>10. Security</h4>
+          <p>We take appropriate technical and organisational measures to protect your data from unauthorised access, loss or misuse. Payment information is processed securely using encryption and PCI-DSS compliant providers.</p>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <div class="kfq-end">
+    <div style="display:grid; gap:12px">
+      <h2 class="kfq-h">Still Have A <span>Question?</span></h2>
+      <p class="kfq-p">Write to us and a real person will get back to you.</p>
+    </div>
+    <a class="kfq-btn" href="mailto:contact@kompaswatches.com">Email Us →</a>
+  </div>
+
+</div>
+  
+  
+
+
+
+</div>
+
+<style class="transform-vars">
+    .fe-block-yui_3_17_2_1_1791028108753_4765 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+      --block-transform: none;
+
+      opacity: var(--opacity, 1);
+      transform: var(--block-transform);
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style><style class="transform-overrides-vars">
+  
+</style>
+

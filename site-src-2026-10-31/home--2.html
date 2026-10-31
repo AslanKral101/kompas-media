@@ -1,0 +1,327 @@
+<!-- page /home section 6a1dc40972ee8121029d8a0c block block-yui_3_17_2_1_1790984131233_3126 -->
+
+  
+
+<div class="sqs-code-container" data-localized="{&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}">
+  
+    <!-- =====================================================
+     KOMPAS — BRITISH BY DESIGN (Code Block)
+     Replaces 3 blocks: Designed In Great Britain + British Watch &
+     Clock Makers + Partners logos. Split layout, left-aligned on
+     purpose so it doesn't repeat the centred sections. No script.
+     ===================================================== -->
+<style>
+  .kbr {
+    --kx-orange: #FF9800;
+    --kx-white: #FFFFFF;
+    --kx-muted: rgba(255, 255, 255, 0.72);
+    --kx-line: rgba(255, 255, 255, 0.12);
+    font-family: "Public Sans", sans-serif;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0 24px;
+    box-sizing: border-box;
+  }
+
+  .kbr *,
+  .kbr *::before,
+  .kbr *::after {
+    box-sizing: border-box;
+  }
+
+  /* ---- top: story left, badge right ---- */
+  .kbr-top {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 72px;
+    margin-bottom: 64px;
+  }
+
+  .kbr-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0 0 18px !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--kx-orange) !important;
+  }
+
+  .kbr-label img {
+    display: block;
+    width: 28px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px var(--kx-line);
+  }
+
+  .kbr-title {
+    margin: 0 0 20px !important;
+    font-size: clamp(32px, 4vw, 54px) !important;
+    font-weight: 700 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.025em !important;
+    color: var(--kx-white) !important;
+  }
+
+  .kbr-title span {
+    display: block;
+    color: var(--kx-orange) !important;
+  }
+
+  .kbr-body {
+    max-width: 520px;
+    margin: 0 0 14px !important;
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: var(--kx-muted) !important;
+  }
+
+  .kbr-body strong {
+    font-weight: 600;
+    color: var(--kx-white);
+  }
+
+  .kbr-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 18px;
+    padding: 15px 30px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--kx-orange) !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: 1px solid var(--kx-orange) !important;
+    border-radius: 999px;
+    text-decoration: none !important;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .kbr-btn i {
+    font-style: normal;
+    transition: transform 0.25s ease;
+  }
+
+  .kbr-btn:hover,
+  .kbr-btn:focus-visible {
+    background: var(--kx-orange) !important;
+    color: #000 !important;
+  }
+
+  .kbr-btn:hover i,
+  .kbr-btn:focus-visible i {
+    transform: translateX(4px);
+  }
+
+  /* badge panel */
+  .kbr-badge {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 44px 36px 32px;
+    border: 1px solid var(--kx-line);
+    border-radius: 12px;
+    background: radial-gradient(120% 90% at 50% 0%, rgba(255, 152, 0, 0.10) 0%, rgba(255, 152, 0, 0) 60%), rgba(255, 255, 255, 0.02);
+    text-align: center;
+  }
+
+  .kbr-badge img {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    transition: transform 0.4s ease;
+  }
+
+  .kbr-badge:hover img {
+    transform: scale(1.04);
+  }
+
+  .kbr-badge p {
+    margin: 0 !important;
+    font-size: 11px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--kx-muted) !important;
+  }
+
+  /* ---- bottom: press / partner logos ---- */
+  .kbr-press {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    align-items: center;
+    gap: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--kx-line);
+  }
+
+  .kbr-press-label {
+    margin: 0 !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--kx-orange) !important;
+  }
+
+  .kbr-logos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: center;
+    gap: 40px;
+  }
+
+  .kbr-logos a {
+    display: block;
+    text-decoration: none !important;
+    background-image: none !important;
+  }
+
+  .kbr-logos img {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    aspect-ratio: 3 / 1;
+    object-fit: cover;
+    margin: 0 auto;
+    opacity: 0.85;
+    transition: transform 0.35s ease, opacity 0.35s ease;
+  }
+
+  .kbr-logos img.is-flat {
+    filter: brightness(0) invert(1);
+  }
+
+  .kbr-logos a:hover img,
+  .kbr-logos a:focus-visible img {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  /* ---- responsive ---- */
+  @media (max-width: 900px) {
+    .kbr-top {
+      grid-template-columns: 1fr;
+      gap: 40px;
+      text-align: center;
+    }
+    .kbr-body {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+    .kbr-press {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .kbr-logos {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px;
+    }
+    .kbr-logos img {
+      max-width: 200px;
+    }
+    .kbr-badge {
+      padding: 32px 24px 24px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .kbr-btn,
+    .kbr-btn i,
+    .kbr-badge img,
+    .kbr-logos img {
+      transition: none;
+    }
+  }
+</style>
+
+<div class="kbr">
+  <div class="kbr-top">
+    <!-- story -->
+    <div>
+      <p class="kbr-label">
+        <img src="https://images.squarespace-cdn.com/content/v1/6809590b27b6474f49d40fa3/87bbf321-9ce0-4614-a3aa-231e7f40c9b3/Flag-United-Kingdom.webp" alt="" loading="lazy">
+        Heritage
+      </p>
+      <h2 class="kbr-title">Designed In <span>Great Britain</span></h2>
+      <p class="kbr-body">Inspired by RAF sector clock systems, each timepiece is designed for instant clarity.</p>
+      <p class="kbr-body">We are proud to be a <strong>Trade Member of the British Watch and Clock Makers Alliance</strong>, a commitment to independent watchmaking, thoughtful design and the growing community of British horology.</p>
+      <a class="kbr-btn" href="/history">Discover Our History <i>→</i></a>
+    </div>
+
+    <!-- badge -->
+    <div class="kbr-badge">
+      <img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c914afc8f4db4c24e45/1792965777138/k-gpt-1138.webp" alt="British Watch &amp; Clock Makers – Trade Member" loading="lazy">
+      <p>British Watch &amp; Clock Makers · Trade Member</p>
+    </div>
+  </div>
+
+  <!-- press / partners -->
+  <div class="kbr-press">
+    <p class="kbr-press-label">Partners &amp;<br>Featured In</p>
+    <div class="kbr-logos">
+      <a href="https://oracleoftime.com/discovers-watches-for-march-2026/" target="_blank" rel="noopener">
+        <img class="is-flat" src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c6f6704bb48c0bbc94e/1792965743528/k-gpt-1137-1.webp" alt="Oracle of Time" loading="lazy">
+      </a>
+      <a href="https://www.bubago.com/" target="_blank" rel="noopener">
+        <img class="is-flat" src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c70525d14282276a29c/1792965744547/k-gpt-1137-2.webp" alt="Bubago" loading="lazy">
+      </a>
+      <a href="https://www.watchgecko.com/blogs/magazine/the-kompas-east-watchgecko-strap-showcase" target="_blank" rel="noopener">
+        <img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c723dd81f1170c831d2/1792965746572/k-gpt-1137-3.webp" alt="WatchGecko" loading="lazy">
+      </a>
+      <a href="https://www.vakkorama.com.tr/markalar/kompas-b-4247" target="_blank" rel="noopener">
+        <img src="https://static1.squarespace.com/static/6809590b27b6474f49d40fa3/t/6ade7c6e026954191660c0eb/1792965742527/k-gpt-0109.webp" alt="Vakkorama" loading="lazy">
+      </a>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+
+</div>
+
+<style class="transform-vars">
+    .fe-block-yui_3_17_2_1_1790984131233_3126 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+      --block-transform: none;
+
+      opacity: var(--opacity, 1);
+      transform: var(--block-transform);
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style><style class="transform-overrides-vars">
+  
+</style>
+

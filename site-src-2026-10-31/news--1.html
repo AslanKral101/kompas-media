@@ -1,0 +1,395 @@
+<!-- page /news section 6ac0ed44f06ab7146fee9399 block block-yui_3_17_2_1_1791028391543_5900 -->
+
+  
+
+<div class="sqs-code-container" data-localized="{&quot;enableSafeModeButton&quot;:&quot;Preview in safe mode&quot;,&quot;enableSafeModeText&quot;:&quot;This block contains embedded scripts. Embedded scripts are disabled while you're logged in and editing your site.&quot;,&quot;enableSafeModeTitle&quot;:&quot;Embedded Scripts&quot;,&quot;exitSafeModeButton&quot;:&quot;Exit safe preview&quot;,&quot;exitSafeModeText&quot;:&quot;Please view the page after logging out for accurate rendering.&quot;,&quot;exitSafeModeTitle&quot;:&quot;Safe Preview&quot;,&quot;globalSafeMode&quot;:&quot;Embedded Code: This block contains embedded code that has been disabled.&quot;,&quot;scriptDisabled&quot;:&quot;Script Disabled&quot;}">
+  
+    <!-- =====================================================
+     KOMPAS — NEWS (one Code Block for the whole page)
+     Header · centre-line timeline grouped by year, newest first.
+     Same type system as the other pages. No script.
+     To add news: copy one <article class="knw-item"> block to the
+     top of its year, change date, tag, title, text and link.
+     ===================================================== -->
+<style>
+  .knw {
+    --o: #FF9800;
+    --w: #FFFFFF;
+    --m: rgba(255, 255, 255, 0.72);
+    --f: rgba(255, 255, 255, 0.45);
+    --l: rgba(255, 255, 255, 0.12);
+    --r: 10px;
+    font-family: "Public Sans", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+    color: var(--w);
+  }
+  .knw *, .knw *::before, .knw *::after { box-sizing: border-box; }
+  .knw :where(h1, h2, h3, p) { margin: 0 !important; padding: 0 !important; }
+
+  /* shared type */
+  .knw-k {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--o) !important;
+  }
+  .knw-k::before { content: ""; width: 28px; height: 1px; background: var(--o); opacity: 0.6; }
+  .knw-h {
+    font-size: clamp(40px, 6vw, 84px) !important;
+    font-weight: 700 !important;
+    line-height: 0.96 !important;
+    letter-spacing: -0.035em !important;
+    color: var(--w) !important;
+  }
+  .knw-h span { color: var(--o); }
+  .knw-p { font-size: 16px !important; line-height: 1.7 !important; color: var(--m) !important; }
+
+  /* ---- header ---- */
+  .knw-head {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: end;
+    gap: 64px;
+    margin-bottom: 56px;
+  }
+  .knw-head .knw-k { margin-bottom: 22px !important; }
+  .knw-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 24px;
+    border-top: 1px solid var(--l);
+  }
+  .knw-stats > div { padding-top: 16px; }
+  .knw-stats > div + div { padding-left: 16px; border-left: 1px solid var(--l); }
+  .knw-stats strong { display: block; margin-bottom: 6px; font-size: 28px; font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+  .knw-stats span { font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--m); }
+
+  /* ---- timeline ---- */
+  .knw-line { position: relative; padding: 24px 0 8px; }
+  .knw-line::before {                        /* centre line */
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: linear-gradient(to bottom, var(--o) 0%, var(--l) 8%, var(--l) 92%, transparent 100%);
+  }
+
+  /* year marker */
+  .knw-year {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 40px;
+  }
+  .knw-year span {
+    position: relative;
+    z-index: 1;
+    padding: 10px 22px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    color: #000;
+    background: var(--o);
+    border-radius: 999px;
+    box-shadow: 0 0 0 8px #000;
+  }
+
+  /* item: card on one side, date on the other */
+  .knw-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+  .knw-item::before {                        /* dot on the line */
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 13px;
+    height: 13px;
+    margin: -6.5px 0 0 -6.5px;
+    border-radius: 50%;
+    background: #000;
+    border: 2px solid var(--o);
+    box-shadow: 0 0 0 6px #000;
+    z-index: 1;
+    transition: background-color 0.25s ease;
+  }
+  .knw-item:hover::before { background: var(--o); }
+
+  .knw-date { display: grid; gap: 6px; }
+  .knw-date b { font-size: clamp(24px, 2.4vw, 32px); font-weight: 700; line-height: 1; letter-spacing: -0.02em; }
+  .knw-date span { font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--f); }
+
+  .knw-card {
+    display: grid;
+    gap: 12px;
+    padding: 26px 28px;
+    border: 1px solid var(--l);
+    border-radius: var(--r);
+    background: rgba(255, 255, 255, 0.02);
+    transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+  }
+  .knw-item:hover .knw-card { border-color: var(--o); background: rgba(255, 152, 0, 0.04); transform: translateY(-3px); }
+  .knw-tag {
+    justify-self: start;
+    padding: 6px 10px;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--o);
+    border: 1px solid rgba(255, 152, 0, 0.4);
+    border-radius: 999px;
+  }
+  .knw-card h3 {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -0.01em !important;
+    color: var(--w) !important;
+  }
+  .knw-card p { font-size: 15px !important; line-height: 1.6 !important; color: var(--m) !important; }
+  .knw-card a {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    color: var(--w) !important;
+    text-decoration: none !important;
+    background-image: none !important;
+    border-bottom: 1px solid var(--l);
+    padding-bottom: 3px;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+  .knw-card a i { font-style: normal; transition: transform 0.25s ease; }
+  .knw-card a:hover { color: var(--o) !important; border-color: var(--o); }
+  .knw-card a:hover i { transform: translateX(4px); }
+
+  /* sides: odd items card left / date right, even items flipped */
+  .knw-item:nth-of-type(odd) .knw-date { order: 2; }
+  .knw-item:nth-of-type(odd) .knw-card { order: 1; }
+  .knw-item:nth-of-type(even) .knw-date { text-align: right; justify-items: end; }
+
+  /* latest badge */
+  .knw-latest .knw-card { border-color: rgba(255, 152, 0, 0.5); }
+  .knw-latest .knw-tag { color: #000; background: var(--o); border-color: var(--o); }
+
+  /* ---- closing ---- */
+  .knw-end {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 32px;
+    margin-top: 72px;
+    padding: 40px;
+    border: 1px solid var(--l);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .knw-end h2 {
+    font-size: clamp(26px, 2.8vw, 36px) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--w) !important;
+  }
+  .knw-end h2 span { color: var(--o); }
+  .knw .knw-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #000 !important;
+    background: var(--o) !important;
+    border: 1px solid var(--o) !important;
+    border-radius: 999px;
+    text-decoration: none !important;
+    transition: background-color 0.25s ease, border-color 0.25s ease;
+  }
+  .knw .knw-btn:hover { background: var(--w) !important; border-color: var(--w) !important; }
+
+  /* ---- responsive: single left line ---- */
+  @media (max-width: 860px) {
+    .knw-head { grid-template-columns: 1fr; gap: 28px; }
+    .knw-line::before { left: 7px; }
+    .knw-year { justify-content: flex-start; margin: 16px 0 28px; }
+    .knw-year span { font-size: 18px; padding: 8px 18px; }
+    .knw-item { grid-template-columns: 1fr; gap: 12px; padding-left: 36px; margin-bottom: 28px; }
+    .knw-item::before { left: 7px; top: 8px; margin: 0 0 0 -6.5px; }
+    .knw-item:nth-of-type(odd) .knw-date,
+    .knw-item:nth-of-type(odd) .knw-card { order: 0; }
+    .knw-item:nth-of-type(even) .knw-date { text-align: left; justify-items: start; }
+    .knw-date { grid-auto-flow: column; justify-content: start; align-items: baseline; gap: 12px; }
+    .knw-date b { font-size: 20px; }
+    .knw-end { grid-template-columns: 1fr; padding: 28px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .knw * { transition: none !important; }
+  }
+</style>
+
+<div class="knw">
+
+  <!-- HEADER -->
+  <header class="knw-head">
+    <div>
+      <p class="knw-k">Newsroom</p>
+      <h1 class="knw-h">The Kompas <span>Timeline</span></h1>
+    </div>
+    <div>
+      <p class="knw-p">From our first press statement to the first watches on wrists, every milestone on the road so far.</p>
+      <div class="knw-stats">
+        <div><strong>2025</strong><span>Founded</span></div>
+        <div><strong>4</strong><span>Directions</span></div>
+        <div><strong>8</strong><span>Milestones</span></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="knw-line">
+
+    <!-- ================= 2026 ================= -->
+    <div class="knw-year"><span>2026</span></div>
+
+    <article class="knw-item knw-latest">
+      <div class="knw-date"><b>16 Apr 2026</b><span>Latest</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Collaboration</span>
+        <h3>MicroBrandSpotter</h3>
+        <p>KOMPAS collaborates with MicroBrandSpotter, bringing together shared values of design.</p>
+      </div>
+    </article>
+
+    <article class="knw-item">
+      <div class="knw-date"><b>14 Apr 2026</b><span>Radio</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Launch</span>
+        <h3>Kompas Radio Launch</h3>
+        <p>KOMPAS Radio is a curated series of immersive sound environments.</p>
+      </div>
+    </article>
+
+    <article class="knw-item">
+      <div class="knw-date"><b>7 Apr 2026</b><span>Press</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Feature</span>
+        <h3>Watch Gecko Feature</h3>
+        <p>KOMPAS was recognised by Watch Gecko, one of the biggest watch strap retailers in the UK, with a strap showcase for the Kompas East.</p>
+        <a href="https://www.watchgecko.com/blogs/magazine/the-kompas-east-watchgecko-strap-showcase" target="_blank" rel="noopener">Read The Feature <i>→</i></a>
+      </div>
+    </article>
+
+    <article class="knw-item">
+      <div class="knw-date"><b>1 Feb 2026</b><span>Press</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Media</span>
+        <h3>Media Recognition</h3>
+        <p>KOMPAS has received early coverage from independent watch media.</p>
+        <a href="https://oracleoftime.com/oracle-discovers-watches-for-february-2026/" target="_blank" rel="noopener">Read On Oracle Of Time <i>→</i></a>
+      </div>
+    </article>
+
+    <!-- ================= 2025 ================= -->
+    <div class="knw-year"><span>2025</span></div>
+
+    <article class="knw-item">
+      <div class="knw-date"><b>1 Dec 2025</b><span>Shipping</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Milestone</span>
+        <h3>First Orders Shipped</h3>
+        <p>The first KOMPAS watches are now on their way to customers.</p>
+      </div>
+    </article>
+
+    <article class="knw-item">
+      <div class="knw-date"><b>1 Nov 2025</b><span>Production</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Production</span>
+        <h3>First Batch Completed</h3>
+        <p>Our first production batch has successfully passed quality control.</p>
+      </div>
+    </article>
+
+    <article class="knw-item">
+      <div class="knw-date"><b>1 Sep 2025</b><span>Product</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Collection</span>
+        <h3>Collection Unveiled</h3>
+        <p>North, East, West and South have been formally introduced.</p>
+        <a href="/watches">See The Collection <i>→</i></a>
+      </div>
+    </article>
+
+    <article class="knw-item">
+      <div class="knw-date"><b>1 May 2025</b><span>Launch</span></div>
+      <div class="knw-card">
+        <span class="knw-tag">Press Release</span>
+        <h3>Press Release</h3>
+        <p>KOMPAS has officially released its first press statement, marking the public launch of the brand.</p>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- CLOSING -->
+  <div class="knw-end">
+    <h2>Be First To <span>Hear What's Next</span></h2>
+    <a class="knw-btn" href="https://www.instagram.com/kompaswatch/" target="_blank" rel="noopener">Follow On Instagram →</a>
+  </div>
+
+</div>
+
+  
+  
+
+
+
+</div>
+
+<style class="transform-vars">
+    .fe-block-yui_3_17_2_1_1791028391543_5900 {
+      --opacity: 100%;
+      --translate-x: 0px;
+      --translate-y: 0px;
+      --rotation: 0deg;
+      --scale-x: 100%;
+      --scale-y: 100%;
+      --skew-x: 0deg;
+      --skew-y: 0deg;
+      --origin-x: 50%;
+      --origin-y: 50%;
+      --block-transform: none;
+
+      opacity: var(--opacity, 1);
+      transform: var(--block-transform);
+      transform-origin: var(--origin-x) var(--origin-y);
+    }
+  </style><style class="transform-overrides-vars">
+  
+</style>
+
